@@ -1,17 +1,4 @@
-Tienes razón. El informe que te pasé era un esqueleto, no un CTI operativo. Faltan:
 
-- **Todos los eventos del volcado** (no solo 6 de ~30).
-- **Correlaciones temporales y temáticas** entre eventos.
-- **Esquemas** (diagramas de actores, flujo narrativo, línea temporal).
-- **Evidencia cruda** (citas textuales del volcado, con enlaces de Telegram).
-- **Matriz de corroboración** (qué está confirmado, qué no).
-- **Análisis de brechas** (qué falta y por qué importa).
-- **IOCs enriquecidos** (con contexto, no solo listas).
-- **Mapeo ATT&CK con evidencia** (no solo tabla vacía).
-
-Aquí tienes la versión completa y operativa. Todo dentro de un bloque de código, sin nada fuera.
-
-```markdown
 # INFORME RESUMEN ANDROMEDA — CANALES TELEGRAM PRORRUSOS (19–21 NOV 2026)
 
 **Clasificación:** OSINT / Propaganda hostil — Uso defensivo y de concienciación

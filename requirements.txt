@@ -1,0 +1,6 @@
+# Dependencias opcionales para validación y exportación de informes.
+# Los informes son Markdown plano; no se requieren para leerlos.
+
+markdownlint-cli==0.41.0
+markdown-link-check==3.12.2
+pymarkdownlnt==0.9.22

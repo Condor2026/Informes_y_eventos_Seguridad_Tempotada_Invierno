@@ -876,7 +876,430 @@ Sondas de dosis gamma anómalas (BfS), noticias de centrales/OIEA/CTBTO, sismos 
 - **MEDIA** — **NUC Radiación ES** · radiacion · 22h · 🚫
   - Alerta por radiación extrema! El sol golpeará a Panamá este sábado
   - Alerta por radiación extrema! El sol golpeará a Panamá este sábado
-```
 
+
+# NEXUS — 5844 eventos · ventana 24 h · 16:37:05
+
+`24 h · ⟳ · ✕ Cerrar (Esc)`
+
+## Resumen rápido
+
+- ▸ Nivel **CRÍTICO** (100/100), estable respecto a la ventana anterior.
+- ▸ Corredor de ciberataque más activo: **United States → Switzerland** (ddos, 9 eventos).
+- ▸ Grupo más activo: **NoName057(16)** (393 eventos, 270 IPs frescas).
+- ▸ Terrorismo: 23 eventos (baja frente a 35); 14 de gravedad ALTA/CRÍTICA, el foco principal es **Israel**.
+- ▸ 1 proveedor(es) con incidencias: **Microsoft**.
+- ▸ Dónde mirar primero: **United States** y **Russia** (mayor riesgo ponderado).
+- ▸ 95 evento(s) CRÍTICO(S) en la ventana.
+- ▸ Correlación más fuerte: **Conflicto ↔ Disturbios** (puntuación 47, 2026-11-22 14:58 UTC).
+- ▸ Fuentes: 324 vivas, 3 con fallo y 0 pausadas.
+
+
+## Índice de amenaza
+
+### Indicadores
+
+| Indicador | Valor | Tendencia |
+|---|---:|---|
+| C2 / botnets | 7 | ▲ +2 |
+| Malware | 2 | ▼ -16 |
+| DDoS | 427 | ▼ -266 |
+| Fuerza bruta | 332 | ▼ -401 |
+| Exploits / 0-day | 21 | ▼ -15 |
+| Ransomware | 96 | ▲ +90 |
+| Phishing | 120 | ▲ +50 |
+| Vulnerab. (KEV) | 0 | ▼ -4 |
+| IPs únicas | 667 | ▼ -413 |
+| Crimen | 208 | ▼ -88 |
+| Conflicto | 623 | ▼ -133 |
+| Críticos | 95 | ▼ -1 |
+
+### Actividad por familia
+
+| Familia | Eventos | vs ventana | % · críticos |
+|---|---:|---:|---|
+| Ciber | 1051 | ▼ -606 | 18% · 41 crít. |
+| Crimen | 208 | ▼ -88 | 3.6% · 0 crít. |
+| Conflicto | 623 | ▼ -133 | 10.7% · 34 crít. |
+| Naturaleza | 684 | ▼ -318 | 11.7% · 4 crít. |
+| Economía | 2714 | ▼ -2094 | 46.6% · 12 crít. |
+| Mundo | 550 | ▼ -68 | 9.4% · 4 crít. |
+
+### Totales de la ventana
+
+- **5830** eventos
+- ▼ -3307 vs ventana anterior
+- **242.9/h** ritmo
+- **19:37 (1047)** hora pico
+- **95** críticos
+- **1074** altas
+- **Economía** más activo
+- **United States** país líder
+- **Digitraffic AIS (Finlandia)** fuente líder
+- **667** IPs únicas
+- **144** fuentes
+- **50** países
+
+## Tácticas MITRE ATT&CK
+
+### Familias
+
+### Técnicas más vistas
+
+| Técnica | Nombre | Eventos |
+|---|---|---:|
+| T1498 | Network Denial of Service | 427 |
+| T1110 | Brute Force | 332 |
+| T1595 | Active Scanning | 331 |
+| T1566 | Phishing | 122 |
+| T1486 | Data Encrypted for Impact | 96 |
+| T1090 | Proxy | 25 |
+| T1567 | Exfiltration Over Web Service | 8 |
+| T1190 | Exploit Public-Facing Application | 5 |
+
+### Países en riesgo
+
+### Fuentes más activas
+
+### Qué ha cambiado
+
+vs ventana anterior
+
+| Tipo | Tendencia | Antes → Ahora |
+|---|---:|---|
+| maritimo | ▼ -1988 | 4574 → 2586 |
+| bruteforce | ▼ -401 | 733 → 332 |
+| ddos | ▼ -266 | 693 → 427 |
+| terremoto | ▼ -167 | 456 → 289 |
+| radiacion | ▼ -126 | 308 → 182 |
+| crimen | ▼ -95 | 200 → 105 |
+
+## Corredores de ciberataque
+
+| Origen → Destino | Tipo | Eventos |
+|---|---|---:|
+| United States → Switzerland | ddos | 9 |
+| Italy → Switzerland | ddos | 3 |
+| United Kingdom → Switzerland | ddos | 2 |
+| France → Switzerland | ddos | 2 |
+| Russia → Spain | ddos | 1 |
+| Canada → Switzerland | ddos | 1 |
+| Serbia → Switzerland | ddos | 1 |
+| Hungary → Switzerland | ddos | 1 |
+
+## Grupos activos
+
+eventos · IPs frescas
+
+| Grupo | Tipo | Eventos · IPs frescas |
+|---|---|---:|
+| NoName057(16) | ddos | 393 · 270 |
+| Killnet | ddos | 25 · 0 |
+| DarkStorm Team | ddos | 2 · 0 |
+| ShinyHunters | ransomware | 2 · 0 |
+
+## Secciones temáticas
+
+- Terrorismo
+- Revueltas callejeras
+- Crimen urbano
+- 🔌 Caídas
+- ₿ Cripto
+
+## Terrorismo
+
+▸ Terrorismo: 23 eventos (baja frente a 35); 14 de gravedad ALTA/CRÍTICA, el foco principal es Israel.
+
+**23** eventos · ventana 24 h  
+vs ventana anterior  
+▼ -12  
+ALTA 14 · MEDIA 8 · BAJA 1
+
+### Países con más actividad
+
+- Israel — 24 🕒
+- Italy — 15 🕒
+- Mexico — 13.5 🕒
+- Turkey — 12 🕒
+- Spain — 10 🕒
+- Iran — 9 🕒
+
+### Últimos eventos
+
+- Alerta bomba · España · artefactos y amenazas Una falsa alarma por una maleta abandonada en la avenida de Lugo de Santiago obliga a cortar el tráfico y acor
+- Detenciones · Europa EN Turkish woman arrested during Friday prayers at Temple Mount for alleged terror incitement
+- DW Israel's Eisenkot condemns 'Jewish terrorism' in West Bank
+- Detenciones · Latinoamérica Gobierno de Perú anuncia construcción de megacárceles y crea registro antiterrorista entre críticas por detenc
+- AP (GNews) Israeli opposition leader condemns suspected settler attacks as 'terrorism,' and other Mideast news
+- La Repubblica Olmert: “La prima emergenza è il terrorismo dei coloni. Sì agli arabi nel nuovo esecutivo”
+- Infobae México rechaza en la OEA el término “narcoterrorismo”
+- Alerta bomba · EEUU/Global EN Hyderabad Police Intensify Security After Receiving Bomb Threat Email
+
+## Criptomonedas · top 10
+
+actualizado 16:37:06
+
+| Activo | Precio | 24h | 1h | 7d |
+|---|---:|---|---|---|
+| BTCBitcoin | $60,756 | ▲ +1.55% 24h | 1h +0.42% | 7d -6.90% |
+| ETHEthereum | $1,715 | ▲ +2.05% 24h | 1h +0.65% | 7d -6.46% |
+| USDTTether | $0.999 | ▲ +0.01% 24h | 1h +0.00% | 7d -0.07% |
+| BNBBNB | $556.22 | ▲ +2.02% 24h | 1h +0.60% | 7d -6.50% |
+| USDCUSDC | $0.999 | ▲ +0.01% 24h | 1h +0.00% | 7d -0.03% |
+| XRPXRP | $0.922 | ▼ -0.11% 24h | 1h +0.55% | 7d -4.63% |
+| SOLSolana | $70.20 | ▼ -0.10% 24h | 1h +0.40% | 7d -3.25% |
+| TRXTRON | $0.305 | ▲ +0.11% 24h | 1h -0.04% | 7d -0.72% |
+| FIGR_HELOCFigure Heloc | $1.06 | ▲ +2.25% 24h | 1h -1.10% | 7d -0.91% |
+| HYPEHyperliquid | $62.70 | ▲ +3.19% 24h | 1h +0.87% | 7d -7.38% |
+
+## Ciberataques · DDoS, malware, ransomware, phishing…
+
+ventana 24 h
+
+- **1051** eventos
+- ▼ -606 vs ventana anterior
+- **43.8/h** ritmo
+- **19:37 (238)** hora pico
+- **41** críticos
+- **449** altas
+- **DDoS** más activo
+- **United States** país líder
+- **Monitor DDoS** fuente líder
+- **667** IPs únicas
+- **28** fuentes
+- **50** países
+
+| Tipo | Eventos | Tendencia | % · críticos |
+|---|---:|---:|---|
+| Ciberataque | 0 | ▼ -30 | 0% · 0 crít. |
+| Vulnerabilidad | 0 | ▼ -4 | 0% · 0 crít. |
+| Cibercrimen | 53 | ▼ -27 | 5% · 0 crít. |
+| DDoS | 427 | ▼ -266 | 40.6% · 1 crít. |
+| Malware / botnet | 2 | ▼ -16 | 0.2% · 0 crít. |
+| Fuerza bruta | 332 | ▼ -401 | 31.6% · 0 crít. |
+| Exploit / 0-day | 5 | ▼ -12 | 0.5% · 5 crít. |
+| Ransomware | 96 | ▲ +90 | 9.1% · 35 crít. |
+| Phishing | 120 | ▲ +50 | 11.4% · 0 crít. |
+| 🔌 Caídas de servicio / internet | 16 | ▲ +10 | 1.5% · 0 crít. |
+
+## Naturaleza · clima y desastres
+
+ventana 24 h
+
+- **684** eventos
+- ▼ -318 vs ventana anterior
+- **28.5/h** ritmo
+- **19:37 (78)** hora pico
+- **4** críticos
+- **156** altas
+- **Terremoto** más activo
+- **Peru** país líder
+- **Safecast** fuente líder
+- **0** IPs únicas
+- **32** fuentes
+- **49** países
+
+| Tipo | Eventos | Tendencia | % · críticos |
+|---|---:|---:|---|
+| Terremoto | 289 | ▼ -167 | 42.3% · 4 crít. |
+| Incendio | 22 | ▼ -9 | 3.2% · 0 crít. |
+| Meteorológico | 161 | ▼ -20 | 23.5% · 0 crít. |
+| Evento natural | 28 | ▲ +4 | 4.1% · 0 crít. |
+| Radiación | 182 | ▼ -126 | 26.6% · 0 crít. |
+| Salud | 2 | • 0 | 0.3% · 0 crít. |
+| Clima espacial | 0 | • 0 | 0% · 0 crít. |
+| Calidad del aire | 0 | • 0 | 0% · 0 crít. |
+
+## Economía · mercados, energía, cripto
+
+ventana 24 h
+
+- **2714** eventos
+- ▼ -2094 vs ventana anterior
+- **113.1/h** ritmo
+- **19:37 (574)** hora pico
+- **12** críticos
+- **15** altas
+- **Marítimo** más activo
+- **South Korea** país líder
+- **Digitraffic AIS (Finlandia)** fuente líder
+- **0** IPs únicas
+- **15** fuentes
+- **25** países
+
+| Tipo | Eventos | Tendencia | % · críticos |
+|---|---:|---:|---|
+| Economía | 3 | ▼ -3 | 0.1% · 0 crít. |
+| Energía | 2 | • 0 | 0.1% · 0 crít. |
+| Mercado | 13 | ▼ -13 | 0.5% · 0 crít. |
+| Marítimo | 2586 | ▼ -1988 | 95.3% · 0 crít. |
+| Vuelo | 0 | • 0 | 0% · 0 crít. |
+| Cripto | 110 | ▼ -90 | 4.1% · 12 crít. |
+
+## ⚔ WAR · guerra y geopolítica
+
+ventana 24 h
+
+- **512** eventos
+- ▼ -73 vs ventana anterior
+- **21.3/h** ritmo
+- **19:37 (61)** hora pico
+- **34** críticos
+- **316** altas
+- **Conflicto** más activo
+- **Russia** país líder
+- **adsb.lol** fuente líder
+- **0** IPs únicas
+- **64** fuentes
+- **50** países
+
+| Tipo | Eventos | Tendencia | % · críticos |
+|---|---:|---:|---|
+| Conflicto | 345 | ▼ -2 | 67.4% · 24 crít. |
+| Terrorismo | 9 | ▼ -7 | 1.8% · 0 crít. |
+| ✖ Detención terrorista / células | 10 | ▲ +2 | 2% · 0 crít. |
+| Geopolítica / escalada | 64 | ▼ -54 | 12.5% · 10 crít. |
+| Aviso a la población | 2 | ▲ +1 | 0.4% · 0 crít. |
+| Vuelo militar | 66 | ▼ -14 | 12.9% · 0 crít. |
+| Explosión (sensores) | 16 | ▲ +1 | 3.1% · 0 crít. |
+
+## Conflicto · guerra, disturbios, vuelos militares
+
+ventana 24 h
+
+- **623** eventos
+- ▼ -133 vs ventana anterior
+- **26/h** ritmo
+- **19:37 (70)** hora pico
+- **34** críticos
+- **368** altas
+- **Conflicto** más activo
+- **Russia** país líder
+- **adsb.lol** fuente líder
+- **0** IPs únicas
+- **71** fuentes
+- **50** países
+
+| Tipo | Eventos | Tendencia | % · críticos |
+|---|---:|---:|---|
+| Conflicto | 345 | ▼ -2 | 55.4% · 24 crít. |
+| Disturbios | 126 | ▼ -62 | 20.2% · 0 crít. |
+| Humanitario | 4 | ▼ -3 | 0.6% · 0 crít. |
+| Vuelo militar | 66 | ▼ -14 | 10.6% · 0 crít. |
+| Alerta de viaje | 0 | • 0 | 0% · 0 crít. |
+| Geopolítica / escalada | 64 | ▼ -54 | 10.3% · 10 crít. |
+| Aviso a la población | 2 | ▲ +1 | 0.3% · 0 crít. |
+| Explosión (sensores) | 16 | ▲ +1 | 2.6% · 0 crít. |
+
+## Crimen · terrorismo, crimen urbano, sanciones
+
+ventana 24 h
+
+- **208** eventos
+- ▼ -88 vs ventana anterior
+- **8.7/h** ritmo
+- **19:37 (35)** hora pico
+- **0** críticos
+- **86** altas
+- **Crimen** más activo
+- **Mexico** país líder
+- **Policía Chicago** fuente líder
+- **0** IPs únicas
+- **37** fuentes
+- **35** países
+
+| Tipo | Eventos | Tendencia | % · críticos |
+|---|---:|---:|---|
+| Crimen | 105 | ▼ -95 | 50.5% · 0 crít. |
+| Crimen urbano | 92 | ▲ +21 | 44.2% · 0 crít. |
+| Terrorismo | 9 | ▼ -7 | 4.3% · 0 crít. |
+| Sanciones | 2 | ▼ -7 | 1% · 0 crít. |
+
+## Alertas recientes
+
+- Desastres LATAM Sismo en Perú de 6.7 grados deja al menos un muerto y casi mil damnificados
+- WAR Explosiones oídas Explosions rock Russian cargo ships near Finland, Libya, drones suspected
+- WAR Diplomacia Israeli attacks kill two Palestinians in Gaza as ceasefire violations continue
+- WAR Báltico y Norte NATO to hold emergency meeting after Russian missiles and drone fall in Poland
+- WAR Báltico y Norte European troops train for Ukraine mission as Russian missile hits Poland
+- WAR Báltico y Norte Poland seeks stronger NATO border defenses after Russian airspace violations
+- WAR Ataques drones Libya’s Eastern Government Suspects Drone Attack Caused Explosion on Russian Ship at Bengh
+- WAR Irán ES Oriente Medio, mañana del 22 de noviembre: Irán ataca el sistema de misiles Patriot de Est
+- The Guardian Netanyahu rival condemns settler arson attacks on Palestinian villages in West Bank
+- Scontri IT Tensioni a Torino per i 30 anni di Askatasuna: scontri nella notte, già dieci identificati
+- GDELT Actor → Russia (130)
+- Scontri IT Scontri in autostrada tra tifosi della Roma e del Torino. Danneggiati i van degli ultrà gr
+- Grupos · Telegram NoName057(16) reivindica DDoS contra Spain · ophiucu/112379
+- Monitor DDoS NoName057(16): 1 IP activas · United States (2026-11-22 15:22)
+
+## Mapa de calor · 24 h
+
+filas = familia · columnas = horas (derecha = ahora)
+
+## Salud de fuentes
+
+**99.7 % de aciertos · 332 fuentes**
+
+- vivas: 324
+- con fallo: 3
+- pausadas: 0
+- sin clave: 5
+- sin ejecutar: 0
+- vacías: 116
+
+### Errores
+
+- **blocklist_de** — ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1029
+- **sans_isc** — JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+- **gdelt_crime** — RuntimeError: cibercrimen: RuntimeError: GDELT no respondió: 429 Too Many Requests; crimen: RuntimeError: GDEL
+
+## Correlaciones en vivo
+
+clic = ver en el mapa
+
+| Puntuación | Correlación | Fuente / Evento | Fecha |
+|---:|---|---|---|
+| 47 | Conflicto ↔ Disturbios | WAR Ucrania-Rusia · Euronews | 2026-11-22 14:58 |
+| 46 | Conflicto ↔ Disturbios | WAR Ataques drones · Euronews | 2026-11-22 14:58 |
+| 43 | Conflicto ↔ Disturbios | WAR Ucrania-Rusia · Euronews | 2026-11-22 14:58 |
+| 40 | Conflicto ↔ Geopolítica / escalada | WAR Báltico y Norte · WAR Ukrainska Pravda | 2026-11-21 15:48 |
+| 39 | Conflicto ↔ Radiación | WAR Ukrainska Pravda · NUC OIEA y centrales EN | 2026-11-21 15:48 |
+| 39 | Conflicto ↔ Geopolítica / escalada | WAR Al Jazeera · WAR FR | 2026-11-21 15:48 |
+| 39 | Conflicto ↔ Geopolítica / escalada | WAR Ataques drones · WAR Ukrainska Pravda | 2026-11-21 15:48 |
+| 39 | Disturbios ↔ Conflicto | Reuters (GNews) · WAR Al Jazeera | 2026-11-21 15:48 |
+| 38 | Conflicto ↔ Explosión (sensores) | WAR Ataques EN · WAR Ucrania-Rusia | 2026-11-22 14:58 |
+| 38 | Conflicto ↔ Geopolítica / escalada | The Hindu · WAR Guerra híbrida | 2026-11-21 15:48 |
+| 38 | Disturbios ↔ Aviso a la población | Reuters (GNews) · WAR Oriente Medio | 2026-11-21 15:48 |
+| 37 | Conflicto ↔ Geopolítica / escalada | WAR ES · WAR Diplomacia | 2026-11-22 14:58 |
+
+## Tendencia por familia
+
+vs. tramo anterior · proyección del próximo intervalo
+
+| Familia | Tendencia | Próximo intervalo |
+|---|---:|---:|
+| Ciber | ▲ -58 % | → 71.1 próx. |
+| Crimen | ▲ -21 % | → 14.4 próx. |
+| Conflicto | ■ +2 % | → 31.5 próx. |
+| Naturaleza | ▲ -37 % | → 31.4 próx. |
+| Economía | ▲ -54 % | → 200.9 próx. |
+| Mundo | ■ -2 % | → 32.4 próx. |
+
+## Comparar con antes
+
+- ahora **5844**
+- tramo anterior **9156**
+- hace 7 días **4427**
+
+| Familia | Ahora | vs anterior | vs 7 d |
+|---|---:|---:|---:|
+| Ciber | 1051 | -37 % | -33 % |
+| Crimen | 208 | -30 % | -5 % |
+| Conflicto | 623 | -18 % | -22 % |
+| Naturaleza | 684 | -32 % | -9 % |
+| Economía | 2714 | -44 % | +1237 % |
+| Mundo | 550 | -11 % | -34 % |
+
+---
 
 _Informe automático con datos abiertos. Los niveles y correlaciones son heurísticos: sirven para saber dónde mirar, no son una prueba._

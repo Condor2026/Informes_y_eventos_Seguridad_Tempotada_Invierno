@@ -1,5 +1,8 @@
 # Informes y Eventos de Seguridad — Temporada de Invierno
 
+**Repositorio:** https://github.com/Condor2026/Informes_y_eventos_Seguridad_Tempotada_Invierno
+**Autor:** Condor2026
+**Licencia:** CC BY 4.0
 [![License: CC BY 4.0](https://img.shields.io/github/license/Condor2026/Informes_y_eventos_Seguridad_Tempotada_Invierno?color=lightgrey)](https://github.com/Condor2026/Informes_y_eventos_Seguridad_Tempotada_Invierno/blob/main/LICENSE)
 [![Último commit](https://img.shields.io/github/last-commit/Condor2026/Informes_y_eventos_Seguridad_Tempotada_Invierno?color=blue)](https://github.com/Condor2026/Informes_y_eventos_Seguridad_Tempotada_Invierno/commits/main)
 [![Tamaño del repo](https://img.shields.io/github/repo-size/Condor2026/Informes_y_eventos_Seguridad_Tempotada_Invierno?color=purple)](https://github.com/Condor2026/Informes_y_eventos_Seguridad_Tempotada_Invierno)
@@ -17,10 +20,6 @@
 
 Repositorio de **informes de inteligencia de amenazas (CTI)** y **registros de eventos de seguridad globales**, elaborados a partir de fuentes públicas identificables (OSINT) y publicados en formato de titulares de evento, sin desarrollo analítico extendido. Cada informe es un archivo Markdown autocontenido, versionado y fechado.
 
-**Repositorio:** https://github.com/Condor2026/Informes_y_eventos_Seguridad_Tempotada_Invierno
-**Autor:** Condor2026
-**Licencia:** CC BY 4.0
-
 ---
 
 ## ¿Qué es este repositorio?
@@ -29,7 +28,7 @@ Este repositorio es un **archivo vivo de eventos de seguridad**. No es un blog, 
 
 La idea es simple: **preservar el evento, no la interpretación**. Cada titular se registra con su fuente, su fecha y su contexto mínimo. El análisis posterior puede hacerse encima, pero el registro queda limpio, fechado y atribuido.
 
-El repositorio nace de una necesidad práctica: la información de seguridad se dispersa, se pierde, se desactualiza y se mezcla con ruido. Aquí se recoge, se ordena y se deja disponible para consulta, comparación y auditoría.
+El proyecto nace de una necesidad práctica: la información de seguridad se dispersa, se pierde, se desactualiza y se mezcla con ruido. Aquí se recoge, se ordena y se deja disponible para consulta, comparación y auditoría.
 
 ---
 
@@ -42,7 +41,7 @@ Estamos construyendo un **archivo cronológico de eventos de seguridad global**,
 3. **Estandarizar** el formato de los informes para que sean comparables entre periodos, fuentes y regiones.
 4. **Documentar la metodología** (fuentes, criterios de inclusión, tratamiento de duplicados y ruido) para que cualquiera pueda reproducir o cuestionar el proceso.
 
-NO estamos haciendo:
+No estamos haciendo:
 - Un producto de inteligencia comercial.
 - Un feed de noticias en tiempo real.
 - Un repositorio de exploits, IOCs accionables o herramientas ofensivas.
@@ -51,7 +50,140 @@ NO estamos haciendo:
 
 ---
 
-## ¿Qué contiene cada informe?
+## ¿Qué vas a encontrar aquí?
+
+- **Informes de eventos globales**: registros cronológicos de seguridad, con fuentes y fechas.
+- **Informes de monitorización DDoS**: análisis de grupos, países y ASN, con advertencias explícitas sobre el uso de IPs de baja fidelidad.
+- **Informes OSINT temáticos**: seguimiento de narrativas, actores y campañas en canales públicos.
+- **Documentación del proyecto**: código de conducta, política de seguridad, accesibilidad y guía de contribución.
+- **Plantillas de issue y pull request**: para que cualquier persona pueda reportar errores, mejoras o barreras de accesibilidad de forma estructurada.
+
+---
+
+## ¿Qué NO vas a encontrar aquí?
+
+Para evitar malentendidos, este repositorio **no contiene**:
+
+- Exploits funcionales ni pruebas de concepto ofensivas.
+- IOCs accionables (hashes, IPs, dominios) listos para bloqueo automatizado.
+- Herramientas ofensivas ni enlaces a su descarga.
+- Datos personales de víctimas, actores o terceros.
+- Credenciales, contraseñas, tokens ni claves API.
+- Enlaces a foros criminales, mercados de datos robados o grupos cerrados.
+- Propaganda o desinformación reproducida sin contexto analítico.
+- Evaluaciones de severidad propias presentadas como veredictos.
+
+Lo que sí contiene son **titulares de evento, con fuente, fecha y contexto**, y un análisis defensivo de TTPs y narrativas.
+
+---
+
+## Principios éticos
+
+El repositorio se rige por un **código de conducta** y una **política de seguridad** explícitos. Los principios son:
+
+1. **Ética primero:** el contenido sirve a fines defensivos, de concienciación o de investigación legítima.
+2. **Transparencia:** toda afirmación se atribuye a su fuente original.
+3. **Respeto:** las discrepancias se resuelven con argumentos, no con ataques personales.
+4. **No amplificación:** no se reproduce propaganda, desinformación ni contenido de grupos hostiles más allá de lo necesario para su análisis.
+5. **Privacidad:** no se publican datos personales de víctimas, actores ni terceros.
+6. **No facilitación:** no se enlazan foros criminales, mercados de datos robados, herramientas ofensivas ni exploits.
+7. **Profesionalidad:** el tono es técnico, sobrio y verificable.
+
+Estos principios están desarrollados en [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) y [`SECURITY.md`](SECURITY.md).
+
+---
+
+## ¿Cómo se elaboran los informes?
+
+El proceso es **manual y verificable**, no automático:
+
+1. **Recolección:** se parte de volcados de monitorización OSINT (canales de Telegram, medios internacionales, feeds de ransomware y DDoS, IODA, ADS-B, entre otros).
+2. **Filtrado:** se descartan canales que solo devuelven error o no aportan contenido, y se descarta ruido (resultados deportivos, tipos de cambio, eventos sin relevancia de seguridad).
+3. **Extracción:** se identifican eventos, se registran con su fuente, fecha y enlace cuando es público y no criminal.
+4. **Estructuración:** se organizan en las secciones temáticas del informe.
+5. **Corroboración:** se marca qué está confirmado, qué es declaración de parte interesada y qué no se ha podido verificar.
+6. **Análisis:** se identifican narrativas, TTPs y correlaciones, siempre con la limitación explícita.
+7. **Publicación:** se versiona el informe en Markdown y se actualiza el índice del repositorio.
+
+El proceso no pretende ser perfecto. Pretende ser **transparente**: cualquiera puede ver qué se incluyó, qué se descartó y por qué.
+
+---
+
+## Fuentes utilizadas
+
+Todas las fuentes son **públicas e identificables**:
+
+- **Medios internacionales:** Reuters, AP, BBC, France 24, DW, Le Monde, El País, Clarín, Infobae, SCMP, The Hindu, Japan Times, Al Jazeera, ANSA, Euronews, RFI, NYT, ABC Australia, Der Spiegel, Tagesschau, La Repubblica, La Vanguardia, El Mundo, ElDiario.es, 20minutos, El Correo, Deia.
+- **Feeds de ransomware:** `Ransomware.live`.
+- **Feeds de DDoS:** `NoName057(16)`, `Killnet`.
+- **Feeds de hosts comprometidos:** `Blocklist.de`, `ET Compromised`, GreenSnow, CI Army, DShield.
+- **Conectividad:** IODA.
+- **Vuelos militares:** ADS-B.
+- **Canales públicos de Telegram:** monitorizados como OSINT, sin infiltración ni acceso a grupos cerrados.
+
+**No se utilizan** fuentes privadas, filtraciones no públicas, datos personales de víctimas, credenciales, exploits ni enlaces a foros criminales.
+
+---
+
+## Estructura del repositorio
+
+```text
+.
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.md
+│   │   ├── informe_erroneo.md
+│   │   ├── accessibility_issue.md
+│   │   ├── feature_request.md
+│   │   └── config.yml
+│   └── pull_request_template.md
+├── .gitattributes
+├── .gitignore
+├── ACCESSIBILITY.md
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── Eventos_Globales_Andromeda.md
+├── Informe_AndromedaUniverso25_Oct_Nov.md
+├── Informe_Andromeda_1.md
+├── Informe_Nexsus_Osint_X_12_Noviembre.md
+├── Informe_Octubre_Noviembre.md
+├── LICENSE
+├── README.md
+├── SECURITY.md
+└── requirements.txt
+```
+
+---
+
+## Índice de informes
+
+| Informe | Periodo / Alcance | Archivo | Estado |
+|---|---|---|---|
+| **Eventos Globales Andromeda** | Eventos globales de seguridad (registro) | [`Eventos_Globales_Andromeda.md`](Eventos_Globales_Andromeda.md) | Activo |
+| **Andromeda Universo 25 (Oct–Nov)** | Monitor DDoS y eventos de seguridad, oct–nov | [`Informe_AndromedaUniverso25_Oct_Nov.md`](Informe_AndromedaUniverso25_Oct_Nov.md) | Activo |
+| **Informe Andromeda 1** | Informe Andromeda — parte 1 | [`Informe_Andromeda_1.md`](Informe_Andromeda_1.md) | Activo |
+| **Nexsus OSINT X — 12 Nov** | OSINT X — 12 de noviembre | [`Informe_Nexsus_Osint_X_12_Noviembre.md`](Informe_Nexsus_Osint_X_12_Noviembre.md) | Activo |
+| **Octubre–Noviembre** | Eventos de seguridad oct–nov | [`Informe_Octubre_Noviembre.md`](Informe_Octubre_Noviembre.md) | Activo |
+
+*El índice se actualiza con cada nuevo informe publicado.*
+
+---
+
+## Documentación del proyecto
+
+| Documento | Propósito |
+|---|---|
+| [`README.md`](README.md) | Presentación, contexto, índice y guía general |
+| [`LICENSE`](LICENSE) | Licencia CC BY 4.0 |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Cómo contribuir al repositorio |
+| [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) | Normas de convivencia |
+| [`SECURITY.md`](SECURITY.md) | Política de seguridad y reporte de incidentes |
+| [`ACCESSIBILITY.md`](ACCESSIBILITY.md) | Declaración de accesibilidad |
+| [`requirements.txt`](requirements.txt) | Dependencias opcionales (validación/exportación) |
+
+---
+
+## Formato de los informes
 
 Cada informe sigue una estructura fija y predecible:
 
@@ -80,158 +212,30 @@ Cada informe sigue una estructura fija y predecible:
 
 ---
 
-## ¿Cómo se elaboran los informes?
-
-El proceso es **manual y verificable**, no automático:
-
-1. **Recolección:** se parte de volcados de monitorización OSINT (canales de Telegram, medios internacionales, feeds de ransomware y DDoS, IODA, ADS-B, entre otros).
-2. **Filtrado:** se descartan canales que solo devuelven error o no aportan contenido, y se descarta ruido (resultados deportivos, tipos de cambio, eventos sin relevancia de seguridad).
-3. **Extracción:** se identifican eventos, se registran con su fuente, fecha y enlace cuando es público y no criminal.
-4. **Estructuración:** se organizan en las secciones temáticas del informe.
-5. **Corroboración:** se marca qué está confirmado, qué es declaración de parte interesada y qué no se ha podido verificar.
-6. **Análisis:** se identifican narrativas, TTPs y correlaciones, siempre con la limitación explícita.
-7. **Publicación:** se versiona el informe en Markdown y se actualiza el índice del repositorio.
-
-El proceso no pretende ser perfecto. Pretende ser **transparente**: cualquiera puede ver qué se incluyó, qué se descartó y por qué.
-
----
-
-## ¿Qué fuentes se utilizan?
-
-Todas las fuentes son **públicas e identificables**:
-
-- **Medios internacionales:** Reuters, AP, BBC, France 24, DW, Le Monde, El País, Clarín, Infobae, SCMP, The Hindu, Japan Times, Al Jazeera, ANSA, Euronews, RFI, NYT, ABC Australia, Der Spiegel, Tagesschau, La Repubblica, La Vanguardia, El Mundo, ElDiario.es, 20minutos, El Correo, Deia.
-- **Feeds de ransomware:** `Ransomware.live`.
-- **Feeds de DDoS:** `NoName057(16)`, `Killnet`.
-- **Feeds de hosts comprometidos:** `Blocklist.de`, `ET Compromised`.
-- **Conectividad:** IODA.
-- **Vuelos militares:** ADS-B.
-- **Canales públicos de Telegram:** monitorizados como OSINT, sin infiltración ni acceso a grupos cerrados.
-
-**No se utilizan** fuentes privadas, filtraciones no públicas, datos personales de víctimas, credenciales, exploits ni enlaces a foros criminales.
-
----
-
-## ¿Qué principios éticos rigen el repositorio?
-
-El repositorio se rige por un **código de conducta** y una **política de seguridad** explícitos. Los principios son:
-
-1. **Ética primero:** el contenido sirve a fines defensivos, de concienciación o de investigación legítima.
-2. **Transparencia:** toda afirmación se atribuye a su fuente original.
-3. **Respeto:** las discrepancias se resuelven con argumentos, no con ataques personales.
-4. **No amplificación:** no se reproduce propaganda, desinformación ni contenido de grupos hostiles más allá de lo necesario para su análisis.
-5. **Privacidad:** no se publican datos personales de víctimas, actores ni terceros.
-6. **No facilitación:** no se enlazan foros criminales, mercados de datos robados, herramientas ofensivas ni exploits.
-7. **Profesionalidad:** el tono es técnico, sobrio y verificable.
-
-Estos principios están desarrollados en [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) y [`SECURITY.md`](SECURITY.md).
-
----
-
-## ¿Qué NO contiene este repositorio?
-
-Para evitar malentendidos, este repositorio **no contiene**:
-
-- Exploits funcionales ni pruebas de concepto ofensivas.
-- IOCs accionables (hashes, IPs, dominios maliciosos) listos para bloqueo automatizado.
-- Herramientas ofensivas ni enlaces a su descarga.
-- Datos personales de víctimas, actores o terceros.
-- Credenciales, contraseñas, tokens ni claves API.
-- Enlaces a foros criminales, mercados de datos robados o grupos cerrados.
-- Propaganda o desinformación reproducida sin contexto analítico.
-- Evaluaciones de severidad propias presentadas como veredictos.
-
-Lo que sí contiene son **titulares de evento, con fuente, fecha y contexto**, y un análisis defensivo de TTPs y narrativas.
-
----
-
-## Estructura del repositorio
-
-```text
-.
-├── .github/
-│   ├── ISSUE_TEMPLATE/
-│   │   ├── bug_report.md
-│   │   ├── informe_erroneo.md
-│   │   ├── accessibility_issue.md
-│   │   ├── feature_request.md
-│   │   └── config.yml
-│   └── pull_request_template.md
-├── .gitattributes                               # Normalización de finales de línea
-├── .gitignore                                   # Exclusiones de Git
-├── ACCESSIBILITY.md                             # Declaración de accesibilidad
-├── CODE_OF_CONDUCT.md                           # Código de conducta
-├── CONTRIBUTING.md                              # Guía de contribución
-├── Eventos_Globales_Andromeda.md                # Informe de eventos globales (Andromeda)
-├── Informe_AndromedaUniverso25_Oct_Nov.md       # Informe Andromeda (universo, oct–nov)
-├── Informe_Andromeda_1.md                       # Informe Andromeda — parte 1
-├── Informe_Nexsus_Osint_X_12_Noviembre.md       # Informe OSINT X — 12 nov
-├── Informe_Octubre_Noviembre.md                 # Informe octubre–noviembre
-├── LICENSE                                      # Licencia CC BY 4.0
-├── README.md                                    # Este archivo
-├── SECURITY.md                                  # Política de seguridad
-└── requirements.txt                             # Dependencias opcionales (validación/exportación)
-```
-
----
-
-## Índice de informes
-
-| Informe | Periodo / Alcance | Archivo | Estado |
-|---|---|---|---|
-| **Eventos Globales Andromeda** | Eventos globales de seguridad (registro) | [`Eventos_Globales_Andromeda.md`](Eventos_Globales_Andromeda.md) | Activo |
-| **Andromeda Universo (Oct–Nov)** | Informe Andromeda — universo, oct–nov | [`Informe_AndromedaUniverso25_Oct_Nov.md`](Informe_AndromedaUniverso25_Oct_Nov.md) | Activo |
-| **Informe Andromeda 1** | Informe Andromeda — parte 1 | [`Informe_Andromeda_1.md`](Informe_Andromeda_1.md) | Activo |
-| **Nexsus OSINT X — 12 Nov** | OSINT X — 12 de noviembre | [`Informe_Nexsus_Osint_X_12_Noviembre.md`](Informe_Nexsus_Osint_X_12_Noviembre.md) | Activo |
-| **Octubre–Noviembre** | Eventos de seguridad oct–nov | [`Informe_Octubre_Noviembre.md`](Informe_Octubre_Noviembre.md) | Activo |
-
-*Actualiza esta tabla cuando añadas nuevos informes.*
-
----
-
-## Documentación del repositorio
-
-| Documento | Propósito |
-|---|---|
-| [`README.md`](README.md) | Presentación, contexto, índice y guía general |
-| [`LICENSE`](LICENSE) | Licencia CC BY 4.0 |
-| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Guía de contribución |
-| [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) | Código de conducta |
-| [`SECURITY.md`](SECURITY.md) | Política de seguridad |
-| [`ACCESSIBILITY.md`](ACCESSIBILITY.md) | Declaración de accesibilidad |
-| [`requirements.txt`](requirements.txt) | Dependencias opcionales (validación/exportación) |
-
----
-
-## Formato de los informes
-
-Cada informe sigue una estructura fija:
-
-- **Encabezado:** periodo, alcance, fuente, fecha de corte.
-- **Secciones temáticas:** terrorismo y violencia política, ciberataques (brechas, ransomware, vulnerabilidades, infraestructura crítica, IA y cadena de suministro), disturbios y protestas, conflictos geopolíticos, desastres naturales, crimen urbano, leaks y hacktivismo, otros.
-- **Notas de fuente:** metodología, severidad, tratamiento de duplicados y ruido.
-
-Los informes se publican **tal como se reciben del proceso de monitorización OSINT**, con edición mínima de formato.
-
----
-
-## Uso
+## Cómo usar este repositorio
 
 ```bash
-git clone https://github.com/Condor2026/Informes_y_eventos_Seguridad_Tempotada_Invierno.git
+git clone https://github.com/Condor2026/Informes_y_eventos_Seguridad_Tempotada_Invierno
 cd Informes_y_eventos_Seguridad_Tempotada_Invierno
 ```
 
-No requiere dependencias para leer los informes (son Markdown plano). Las dependencias de `requirements.txt` son solo para validación y exportación opcional.
+Los informes son **Markdown plano**, legibles sin dependencias. Se pueden abrir con cualquier editor de texto, visor de Markdown o herramienta de conversión (Pandoc, etc.).
+
+Las dependencias de `requirements.txt` son **opcionales** y solo se usan para validación y exportación:
+
+- `markdownlint-cli` — validación de formato Markdown.
+- `markdown-link-check` — verificación de enlaces.
+- `pymarkdownlnt` — validación adicional.
 
 ---
 
 ## Contribuir
 
-Ver [`CONTRIBUTING.md`](CONTRIBUTING.md). Las contribuciones se limitan a **correcciones de formato, erratas y metadatos**; no se aceptan informes nuevos sin revisión de metodología.
+Las contribuciones son bienvenidas y se centran en **correcciones de formato, erratas, atribuciones y accesibilidad**. No se aceptan informes nuevos sin revisión previa de metodología.
 
 Antes de abrir un issue o pull request, revisa:
 
+- [`CONTRIBUTING.md`](CONTRIBUTING.md) — cómo contribuir.
 - [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) — normas de convivencia.
 - [`SECURITY.md`](SECURITY.md) — cómo reportar problemas de seguridad.
 - [`ACCESSIBILITY.md`](ACCESSIBILITY.md) — cómo reportar barreras de accesibilidad.
@@ -242,42 +246,13 @@ Las plantillas de issue y pull request están en [`.github/`](.github/) y se car
 
 ## Seguridad
 
-Ver [`SECURITY.md`](SECURITY.md). Para reportar problemas de seguridad, datos personales mal anonimizados o errores graves de atribución, abre un issue privado o contacta al mantenedor.
+Para reportar problemas de seguridad, datos personales mal anonimizados, errores graves de atribución o contenido que viole las políticas del repositorio, consulta [`SECURITY.md`](SECURITY.md). Los reportes se tratan con confidencialidad y diligencia.
 
 ---
 
 ## Accesibilidad
 
-Ver [`ACCESSIBILITY.md`](ACCESSIBILITY.md). El repositorio se compromete a que sus contenidos sean legibles por tecnologías de asistencia. Si encuentras una barrera, abre un issue con la etiqueta `accessibility`.
-
----
-
-## Mantenimiento
-
-### Renombrar un archivo con coma
-
-Si algún archivo aparece con **coma** en lugar de **punto** (`Eventos_Globales_Andromeda,md`), corrígelo con:
-
-```bash
-git mv "Eventos_Globales_Andromeda,md" "Eventos_Globales_Andromeda.md"
-git commit -m "fix: rename Eventos_Globales_Andromeda,md to .md"
-git push
-```
-
-### Añadir un nuevo informe
-
-1. Crea el archivo `.md` en la raíz del repo (o en subcarpeta por año, si se decide).
-2. Añádelo a la tabla del **Índice de informes**.
-3. Actualiza el `CHANGELOG.md` si existe (si no, créalo).
-4. Haz commit y push.
-
-### Validar Markdown
-
-```bash
-# Opcional: validar enlaces y formato
-markdownlint "**/*.md"
-markdown-link-check "**/*.md"
-```
+El repositorio se compromete a que sus contenidos sean legibles por tecnologías de asistencia. Consulta [`ACCESSIBILITY.md`](ACCESSIBILITY.md) para conocer las medidas aplicadas, las limitaciones conocidas y cómo reportar barreras.
 
 ---
 
@@ -290,6 +265,7 @@ Este repositorio **no es perfecto** y no pretende serlo. Sus limitaciones son ex
 - **No se enlazan fuentes citadas que sean foros criminales** por razones éticas, lo que limita la verificación directa.
 - **La severidad indicada es la del feed de origen**, no una evaluación propia.
 - **El análisis de TTPs y narrativas es descriptivo**, no operativo.
+- **Las listas de IPs de DDoS son de baja fidelidad** y no deben usarse para bloqueo automatizado.
 - **El repositorio no constituye asesoramiento** legal, financiero ni de seguridad operacional.
 
 Estas limitaciones no son un defecto: son parte del contrato de transparencia del repositorio.

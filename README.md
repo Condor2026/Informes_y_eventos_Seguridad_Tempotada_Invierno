@@ -1,5 +1,14 @@
 # Informes y Eventos de Seguridad — Temporada de Invierno
 
+[![License: CC BY 4.0](https://img.shields.io/github/license/Condor2026/Informes_y_eventos_Seguridad_Tempotada_Invierno?color=lightgrey)](https://github.com/Condor2026/Informes_y_eventos_Seguridad_Tempotada_Invierno/blob/main/LICENSE)
+[![Último commit](https://img.shields.io/github/last-commit/Condor2026/Informes_y_eventos_Seguridad_Tempotada_Invierno?color=blue)](https://github.com/Condor2026/Informes_y_eventos_Seguridad_Tempotada_Invierno/commits/main)
+[![Tamaño del repo](https://img.shields.io/github/repo-size/Condor2026/Informes_y_eventos_Seguridad_Tempotada_Invierno?color=purple)](https://github.com/Condor2026/Informes_y_eventos_Seguridad_Tempotada_Invierno)
+[![Issues](https://img.shields.io/github/issues/Condor2026/Informes_y_eventos_Seguridad_Tempotada_Invierno?color=orange)](https://github.com/Condor2026/Informes_y_eventos_Seguridad_Tempotada_Invierno/issues)
+[![Stars](https://img.shields.io/github/stars/Condor2026/Informes_y_eventos_Seguridad_Tempotada_Invierno?color=yellow)](https://github.com/Condor2026/Informes_y_eventos_Seguridad_Tempotada_Invierno/stargazers)
+[![CTI](https://img.shields.io/badge/CTI-Inteligencia%20de%20Amenazas-red)](https://github.com/Condor2026/Informes_y_eventos_Seguridad_Tempotada_Invierno)
+[![OSINT](https://img.shields.io/badge/OSINT-Fuentes%20P%C3%BAblicas-blueviolet)](https://github.com/Condor2026/Informes_y_eventos_Seguridad_Tempotada_Invierno)
+[![Uso Defensivo](https://img.shields.io/badge/Uso-Defensivo-green)](https://github.com/Condor2026/Informes_y_eventos_Seguridad_Tempotada_Invierno/blob/main/SECURITY.md)
+
 Repositorio de **informes de inteligencia de amenazas (CTI)** y **registros de eventos de seguridad globales**, en formato de titulares de evento (sin desarrollo analítico extendido). Cada informe es un archivo Markdown autocontenido, versionado y fechado.
 
 **Repositorio:** https://github.com/Condor2026/Informes_y_eventos_Seguridad_Tempotada_Invierno

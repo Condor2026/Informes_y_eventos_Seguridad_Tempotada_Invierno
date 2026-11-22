@@ -18,6 +18,8 @@
 [![Solo OSINT Público](https://img.shields.io/badge/Fuentes-Solo%20OSINT%20P%C3%BAblico-blue)](https://github.com/Condor2026/Informes_y_eventos_Seguridad_Tempotada_Invierno)
 # Informes y Eventos de Seguridad — Temporada de Invierno
 
+![TheCondor](infromes_invierno_wallpr.jpeg)
+
 Repositorio de **informes de inteligencia de amenazas (CTI)** y **registros de eventos de seguridad globales**, elaborados a partir de fuentes públicas identificables (OSINT) y publicados en formato de titulares de evento, sin desarrollo analítico extendido. Cada informe es un archivo Markdown autocontenido, versionado y fechado.
 
 ---

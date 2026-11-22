@@ -1,0 +1,636 @@
+Tienes razón. El informe que te pasé era un esqueleto, no un CTI operativo. Faltan:
+
+- **Todos los eventos del volcado** (no solo 6 de ~30).
+- **Correlaciones temporales y temáticas** entre eventos.
+- **Esquemas** (diagramas de actores, flujo narrativo, línea temporal).
+- **Evidencia cruda** (citas textuales del volcado, con enlaces de Telegram).
+- **Matriz de corroboración** (qué está confirmado, qué no).
+- **Análisis de brechas** (qué falta y por qué importa).
+- **IOCs enriquecidos** (con contexto, no solo listas).
+- **Mapeo ATT&CK con evidencia** (no solo tabla vacía).
+
+Aquí tienes la versión completa y operativa. Todo dentro de un bloque de código, sin nada fuera.
+
+```markdown
+# INFORME RESUMEN ANDROMEDA — CANALES TELEGRAM PRORRUSOS (19–21 NOV 2026)
+
+**Clasificación:** OSINT / Propaganda hostil — Uso defensivo y de concienciación
+**Periodo del volcado:** 2026-11-19 a 2026-11-21
+**Fecha de compilación:** 2026-11-22
+**Fuentes primarias:** `@RVvoenkor`, `@lineasrojas`, `@guerrasygeo`, `@atodapotencia` (Telegram)
+**Estado:** Sin verificación independiente. Contenido atribuido a la fuente original.
+**Versión:** 1.0 — Operativa (esquemas, evidencias, correlaciones)
+
+---
+
+## ⚠️ ADVERTENCIA ÉTICA Y DE USO
+
+Este informe contiene **propaganda de guerra, desinformación y narrativa prorrusa** extraída de canales de Telegram identificados. **No es un producto de inteligencia verificado.** Su propósito es exclusivamente **defensivo**: permitir a analistas, SOC y equipos de concienciación comprender las tácticas narrativas, los temas de desinformación y los posibles vectores de engaño utilizados en el contexto del conflicto Ucrania–Rusia.
+
+**Bajo ninguna circunstancia** debe utilizarse este material para:
+- Amplificar, redistribuir o validar la propaganda contenida.
+- Justificar acciones ofensivas o represalias.
+- Atribuir hechos sin corroboración independiente.
+
+**Los IOCs aquí listados son de baja fidelidad y alta caducidad.** Se marcan explícitamente como *indicadores narrativos*, no como artefactos técnicos maliciosos.
+
+---
+
+## 1. RESUMEN EJECUTIVO (BLUF)
+
+Entre el 19 y el 21 de noviembre de 2026, los canales de Telegram prorrusos monitorizados (`@RVvoenkor`, `@lineasrojas`, `@guerrasygeo`, `@atodapotencia`) mantuvieron una campaña narrativa coordinada centrada en **seis ejes temáticos**:
+
+1. **Supuestas vulnerabilidades y agresiones de la OTAN/Ucrania** (ataques a infraestructura rusa, violaciones de espacio aéreo finlandés, ataques a buques en el Báltico).
+2. **Legitimación de acciones iraníes contra intereses estadounidenses** en Bahréin y el Estrecho de Ormuz, presentadas como represalia legítima.
+3. **Deslegitimación de figuras occidentales** (Elon Musk, príncipe Harry, Marine Le Pen) mediante encuadres selectivos.
+4. **Narrativa de decadencia europea** (Lufthansa, crisis económica alemana) y fracaso del apoyo a Ucrania.
+5. **Amplificación de brechas de seguridad reales** (FBI NCIC) para erosionar confianza institucional.
+6. **Narrativa demográfica y de colapso ucraniano** (proyecciones de población, aniversario del Maidán).
+
+**Evento de mayor relevancia operativa:** el ataque con drones al carguero ruso *Sparta II* en el Golfo de Finlandia y la posterior violación del espacio aéreo finlandés/OTAN por un helicóptero ruso, que escaló tensiones en el Báltico durante el periodo.
+
+---
+
+## 2. LÍNEA TEMPORAL DE EVENTOS (19–21 NOV 2026)
+
+### Esquema 1: Cronología de eventos reportados
+
+```
+2026-11-19
+│
+├── 21:32 [lineasrojas/15722] Mi-28NM aprende a golpear a más de 500 km (Dan-T)
+│
+2026-11-20
+│
+├── 17:31 [lineasrojas/15728] ¿Una sola acción detendrá entregas de armas? (túnel Beskid)
+├── 18:40 [lineasrojas/15731] Fuerzas prosaudíes se retiran de Bab el-Mandeb
+├── 20:01 [lineasrojas/15732] Catálogo de canales geopolíticos (addlist)
+│
+2026-11-21
+│
+├── 17:11 [lineasrojas/15737] Hackers acceden a base de datos del FBI (NCIC)
+├── 17:41 [RVvoenkor/127693] Población de Ucrania puede caer a 26,2M en 2030
+├── 18:01 [lineasrojas/15738] UKRAINE WATCH (canal de propaganda)
+├── 18:27 [guerrasygeo/131776] Explosiones en Bahréin (defensa aérea)
+├── 18:28 [RVvoenkor/127696] Carguero ruso atacado en Golfo de Finlandia
+├── 18:30 [guerrasygeo/131777] Base de la Quinta Flota atacada (3 misiles + drones)
+├── 19:06 [RVvoenkor/127697] Imágenes del Sparta II atacado
+├── 19:07 [guerrasygeo/131778] Misil interceptor cae, provoca incendio
+├── 19:08 [guerrasygeo/131779] Defensa aérea de Bahréin activada de nuevo
+├── 19:15 [guerrasygeo/131781] Explosiones en Ormuz y Sirik
+├── 19:33 [RVvoenkor/127700] Ucrania no derriba misiles hacia Polonia (medios polacos)
+├── 19:37 [guerrasygeo/131782] Dron iraní impacta instalación industrial en Bahréin
+├── 19:43 [RVvoenkor/127701] El enemigo ataca Sebastopol (7 drones neutralizados)
+├── 20:01 [lineasrojas/15740] Lufthansa enviará a mil empleados a inactividad
+├── 20:13 [RVvoenkor/127702] Irán atacó bases de EE.UU. en Bahréin
+├── 20:39 [guerrasygeo/131783] CGRI: ataque a radares Patriot en Rifaa y Awali
+├── 20:43 [guerrasygeo/131784] Asesores norcoreanos/IRGC/Hezbollah ayudan a hutíes
+├── 20:46 [guerrasygeo/131785] Sirena de alerta aérea en Bahréin
+├── 20:47 [RVvoenkor/127705] Letonia no reanudará relaciones con Rusia
+├── 21:09 [guerrasygeo/131787] Trump en Truth Social
+├── 21:14 [RVvoenkor/127706] Trump publica foto con Putin: "Mi amigo"
+├── 21:34 [guerrasygeo/131789] Incendio en Sparta II (foto guardia finlandesa)
+├── 21:37 [lineasrojas/15741] Elecciones en Francia podrían debilitar apoyo a Ucrania
+├── 21:43 [guerrasygeo/131790] Ansar Allah: Riad depende de herramientas que no controla
+├── 21:51 [guerrasygeo/131791] Enlace a YouTube (live)
+├── 21:57 [guerrasygeo/131792] F-35 de EE.UU. emite llamada de emergencia en EAU
+├── 22:00 [guerrasygeo/131793] Bases de EE.UU. en Kuwait atacadas (Ali Al Salem)
+├── 23:20 [RVvoenkor/127686] Apagón en Odesa tras ataques rusos
+├── 23:20 [RVvoenkor/127691] Sirenas en Kaliningrado (objeto sospechoso Lituania)
+├── 23:20 [RVvoenkor/127694] Alarma en Kaliningrado por objeto lituano
+├── 23:22 [lineasrojas/15723] Musk acusa a EE.UU. de organizar el Maidán
+├── 23:22 [lineasrojas/15724] Príncipe Harry quiere luchar contra los rusos
+├── 23:22 [lineasrojas/15727] Zelenski y los "valores ucronazis"
+├── 23:22 [lineasrojas/15733] Londres reconoce operaciones cibernéticas ofensivas
+├── 23:22 [lineasrojas/15734] MQ-9 Reaper derribado (van 58)
+├── 23:22 [lineasrojas/15735] MQ-9 Reaper (duplicado)
+├── 23:22 [lineasrojas/15739] Príncipe Harry (duplicado)
+├── 23:23 [guerrasygeo/131780] Misil balístico ataca base aérea Al-Rifa'a
+├── 23:23 [guerrasygeo/131786] Dron iraní impacta instalación industrial (duplicado)
+├── 23:23 [guerrasygeo/131788] Imágenes de destrucción de MQ9 y MQ1
+├── 23:24 [atodapotencia/17806] EE.UU. y Venezuela firman acuerdo militar
+```
+
+**Observación:** La actividad se concentra en la tarde-noche del 21 de noviembre (UTC), con un pico entre 18:00 y 23:30. Los canales `@guerrasygeo` y `@RVvoenkor` son los más activos en alertas de ataque; `@lineasrojas` concentra la narrativa editorial y de deslegitimación.
+
+---
+
+## 3. EVENTOS SUBRAYADOS (ALTA RELEVANCIA) — CON EVIDENCIA
+
+### 🔴 3.1. Ataque al carguero ruso *Sparta II* y violación del espacio aéreo finlandés
+
+**Fuentes:**
+- `@RVvoenkor` — https://t.me/RVvoenkor/127696 (2026-11-21 18:28)
+- `@RVvoenkor` — https://t.me/RVvoenkor/127697 (2026-11-21 19:06)
+- `@guerrasygeo` — https://t.me/guerrasygeo/131789 (2026-11-21 21:34)
+
+**Evidencia textual (cita del volcado):**
+> "Un carguero ruso que se dirigía a Kaliningrado fue atacado por un UAV en el Golfo de Finlandia por la noche. Después del ataque, los contenedores se incendiaron y el carguero averiado comenzó a derivar hacia aguas territoriales finlandesas, luego otros barcos rusos se acercaron a él. No hubo heridos, dijeron las autoridades. El ataque con drones contra un carguero ruso en el Mar Báltico probablemente fue llevado a cabo por Ucrania, dijeron las Fuerzas de Defensa finlandesas."
+
+> "Un helicóptero ruso violó el espacio aéreo finlandés/de la OTAN, adentrándose unos 4 km para llegar al buque de carga ruso en llamas en aguas territoriales finlandesas. La guardia costera finlandesa y el gobernador de la región de Leningrado, Alexander Drozdenko, confirmaron la infracción."
+
+**Hecho reportado:** Un carguero ruso identificado como *Sparta II*, que navegaba desde San Petersburgo hacia Kaliningrado, fue atacado por drones en aguas internacionales del Golfo de Finlandia. Los contenedores se incendiaron y el buque derivó hacia aguas territoriales finlandesas. Un helicóptero ruso violó el espacio aéreo finlandés/OTAN (aproximadamente 4 km) para aproximarse al buque. Finlandia impuso una prohibición temporal de vuelos en la zona.
+
+**Atribución de la fuente:** Las Fuerzas de Defensa finlandesas sugieren que el ataque fue llevado a cabo por Ucrania; las razones de la selección del objetivo no están establecidas.
+
+**Relevancia:** Escalada directa en el Báltico, involucrando territorio OTAN. Alta probabilidad de explotación narrativa por ambas partes.
+
+**Corroboración:** Pendiente. No hay confirmación independiente en el volcado. La guardia fronteriza finlandesa confirmó la infracción del espacio aéreo según el propio canal.
+
+---
+
+### 🔴 3.2. Ataques iraníes contra instalaciones estadounidenses en Bahréin
+
+**Fuentes:**
+- `@guerrasygeo` — https://t.me/guerrasygeo/131776 (2026-11-21 18:27)
+- `@guerrasygeo` — https://t.me/guerrasygeo/131777 (2026-11-21 18:30)
+- `@guerrasygeo` — https://t.me/guerrasygeo/131778 (2026-11-21 19:07)
+- `@guerrasygeo` — https://t.me/guerrasygeo/131779 (2026-11-21 19:08)
+- `@guerrasygeo` — https://t.me/guerrasygeo/131780 (2026-11-21 23:23)
+- `@guerrasygeo` — https://t.me/guerrasygeo/131782 (2026-11-21 19:37)
+- `@guerrasygeo` — https://t.me/guerrasygeo/131783 (2026-11-21 20:39)
+- `@RVvoenkor` — https://t.me/RVvoenkor/127702 (2026-11-21 20:13)
+
+**Evidencia textual (cita del volcado):**
+> "La Fuerza Espacial del Cuerpo de Guardianes de la Revolución Islámica (CGRI) anuncia que ha atacado con misiles balísticos y drones dos radares estadounidenses pertenecientes al sistema de defensa aérea 'Patriot', ubicados en las bases aéreas de Rifaa y Awali, en Bahréin. El CGRI afirma que la operación, con el nombre en clave 'Ya Umm Al-Baneen', es una respuesta a las repetidas violaciones del espacio aéreo iraní por parte de drones estadounidenses."
+
+> "El Ministerio del Interior de Bahréin informa que un dron iraní impactó en una instalación industrial, provocando un incendio en el lugar."
+
+**Hecho reportado:** El CGRI iraní afirmó haber atacado con misiles balísticos y drones dos radares del sistema Patriot en las bases aéreas de Rifaa y Awali (Bahréin), en la operación "Ya Umm Al-Baneen". El Ministerio del Interior de Bahréin confirmó daños a una instalación industrial civil por impacto de dron. También se reportó un ataque contra la base de la Quinta Flota estadounidense.
+
+**Atribución:** Declaraciones del CGRI y medios iraníes (Press TV). No verificadas de forma independiente en el volcado.
+
+**Relevancia:** Escalada del conflicto Irán–EE.UU. en el Golfo. Posible impacto en el Estrecho de Ormuz y el tráfico marítimo.
+
+**Corroboración:** Pendiente. El Ministerio del Interior de Bahréin confirmó daños a una instalación civil, pero no la autoría iraní. CENTCOM no aparece citado en el volcado.
+
+---
+
+### 🟠 3.3. Apagón masivo en Odesa tras ataques rusos
+
+**Fuente:** `@RVvoenkor` — https://t.me/RVvoenkor/127686 (2026-11-21 23:20)
+
+**Evidencia textual:**
+> "Apagón en Odesa tras los atentados: una ciudad sin electricidad. Debido a los ataques rusos a las principales redes se activa la protección automática, lo que provoca cortes masivos, informa Ukrenergo."
+
+**Hecho reportado:** Ukrenergo activó protección automática tras ataques rusos a redes principales, provocando cortes masivos en Odesa.
+
+**Relevancia:** Ataque a infraestructura crítica energética. Impacto directo en población civil.
+
+**Corroboración:** Pendiente. Ukrenergo es citado como fuente, pero no hay enlace directo a su comunicado en el volcado.
+
+---
+
+### 🟠 3.4. Alarma en Kaliningrado por objeto sospechoso en lado lituano
+
+**Fuentes:**
+- `@RVvoenkor` — https://t.me/RVvoenkor/127691 (2026-11-21 23:20)
+- `@RVvoenkor` — https://t.me/RVvoenkor/127694 (2026-11-21 23:20)
+
+**Evidencia textual:**
+> "Las sirenas de alarma suenan a todo volumen en toda la región de Kaliningrado. Se pide a la población que baje a lugares seguros, informan nuestros lectores. Se envían mensajes a los residentes de que Internet móvil puede estar limitado temporalmente por razones de seguridad. En el aeropuerto internacional de Khrabrovo se han introducido restricciones temporales a la llegada y salida de aviones."
+
+> "Se declaró alarma en la región de Kaliningrado debido a un objeto sospechoso en el lado lituano, - autoridades. El sistema 'Peligro no tripulado' funcionó en la región de Kaliningrado debido a un objeto sospechoso en el lado lituano, dijo el gobernador regional. No existe ninguna amenaza para la región de Kaliningrado, la amenaza de los aviones no tripulados será cancelada en un futuro próximo, añadió."
+
+**Hecho reportado:** El sistema "Peligro no tripulado" se activó en la región de Kaliningrado. El gobernador afirmó que no existe amenaza y que la alerta se cancelaría pronto. Se reportaron restricciones en el aeropuerto de Khrabrovo.
+
+**Relevancia:** Tensión en el flanco noreste de la OTAN. Posible uso narrativo para justificar militarización.
+
+**Corroboración:** Pendiente. El gobernador regional es citado, pero no hay enlace a su comunicado oficial.
+
+---
+
+### 🟠 3.5. Acusaciones de Musk sobre el Maidán y Starlink
+
+**Fuente:** `@lineasrojas` — https://t.me/lineasrojas/15723 (2026-11-21 23:22)
+
+**Evidencia textual:**
+> "Musk acusó a EEUU de organizar el Maidán ucraniano. El empresario afirmó que las autoridades estadounidenses organizaron el golpe de Estado en Ucrania y derrocaron al presidente elegido democráticamente. Enfatizó que, sin la ayuda del Departamento de Estado y otras instituciones, esto no habría sido posible. Además, Musk añadió que es injusto considerar que 'Ucrania es buena y Rusia es mala'... el magnate acusó a Zelenski de no decir la verdad, afirmando que está usando el servicio Starlink para acciones ofensivas aun cuando se le fue dado el acceso única y exclusivamente para fines de índole humanitario."
+
+**Hecho reportado:** El canal atribuye a Elon Musk declaraciones acusando a EE.UU. de organizar el Maidán ucraniano y a Zelenski de usar Starlink para acciones ofensivas.
+
+**Relevancia:** Narrativa de deslegitimación de figuras occidentales y del apoyo a Ucrania.
+
+**Corroboración:** Pendiente. No se cita la fuente original de las declaraciones de Musk (entrevista, tuit, etc.). El volcado no incluye enlace a la declaración primaria.
+
+---
+
+### 🟡 3.6. Declaraciones del príncipe Harry sobre Rusia
+
+**Fuente:** `@lineasrojas` — https://t.me/lineasrojas/15724 (2026-11-21 23:22)
+
+**Evidencia textual:**
+> "El duque de Sussex, en una entrevista al medio The Telegraph, declaró que está dispuesto a volver al servicio militar, advirtiendo que, debido a la amenaza que representa Rusia, 'todos deberíamos tener cuidado'... También criticó duramente el enfoque de Donald Trump sobre el conflicto en Ucrania... El duque declaró a la publicación que, de hecho, el Reino Unido se encuentra en un estado de conflicto con Rusia desde hace una década: 'El hecho de que no nos estén llegando drones, balas y misiles no significa que no estemos en estado de guerra'."
+
+**Hecho reportado:** El canal cita una entrevista del príncipe Harry a *The Telegraph* en la que afirma estar dispuesto a volver al servicio militar y critica la política de Trump hacia Ucrania. Se añade un comentario editorial sobre una foto de 2005 con uniforme nazi.
+
+**Relevancia:** Narrativa de deslegitimación de figuras públicas occidentales. Bajo impacto operativo, alto valor propagandístico.
+
+**Corroboración:** Pendiente. Se cita *The Telegraph* como fuente, pero no hay enlace a la entrevista original.
+
+---
+
+### 🟡 3.7. Brecha en el NCIC del FBI
+
+**Fuente:** `@lineasrojas` — https://t.me/lineasrojas/15737 (2026-11-21 17:11)
+
+**Evidencia textual:**
+> "El FBI está investigando una posible intrusión en el Centro Nacional de Información Criminal (NCIC), un sistema clave para el intercambio de información entre las fuerzas del orden federales, estatales y locales de EEUU. Se encuentran en riesgo datos sobre criminales buscados, órdenes de arresto y resultados de investigaciones... El principal peligro no es solo el robo de información, sino también la posible manipulación de datos."
+
+**Hecho reportado:** Posible intrusión en el NCIC del FBI. Riesgo de robo y manipulación de datos. Se menciona a ShinyHunters como atacante en septiembre (sitio de contratación del FBI).
+
+**Relevancia:** Amplificación de brecha real para erosionar confianza institucional.
+
+**Corroboración:** Pendiente. El canal cita a CNN y a un exempleado del FBI, pero no hay enlace a la fuente primaria.
+
+---
+
+### 🟡 3.8. Retirada de fuerzas prosaudíes en Bab el-Mandeb
+
+**Fuente:** `@lineasrojas` — https://t.me/lineasrojas/15731 (2026-11-20 18:40)
+
+**Evidencia textual:**
+> "Tras seis semanas de intensos combates y ser superados por los hutíes, las fuerzas yemeníes del Consejo Presidencial se retiraron del estrecho de Bab el Mandeb. Según fuentes militares y gubernamentales entrevistadas por AFP, para cuando anunciaron su retirada el 15 de noviembre, los combatientes de Ansar Allah habían llegado a un campamento militar a unos 60 km de la ciudad portuaria."
+
+**Hecho reportado:** Retirada de fuerzas prosaudíes del estrecho de Bab el-Mandeb tras avance hutí. Se cita a AFP como fuente.
+
+**Relevancia:** Cambio en el equilibrio de poder en el mar Rojo. Impacto en tráfico marítimo.
+
+**Corroboración:** Pendiente. Se cita AFP, pero no hay enlace a la noticia original.
+
+---
+
+### 🟡 3.9. Acuerdo militar EE.UU.–Venezuela
+
+**Fuente:** `@atodapotencia` — https://t.me/atodapotencia/17806 (2026-11-21 23:24)
+
+**Evidencia textual:**
+> "Estados Unidos y Venezuela firman un acuerdo de cooperación militar. El documento prevé ejercicios militares conjuntos, el intercambio de datos de inteligencia y la ampliación de la cooperación en el ámbito del equipamiento de defensa. Además, Estados Unidos capacitará y entrenará a fuerzas del Ejército venezolano. Recordemos que el acuerdo se cerró después de la operación militar estadounidense de enero, durante la cual se secuestró al presidente venezolano, Nicolás Maduro."
+
+**Hecho reportado:** Firma de acuerdo de cooperación militar EE.UU.–Venezuela el 18 de noviembre, tras la operación de enero que secuestró a Maduro.
+
+**Relevancia:** Cambio geopolítico en América Latina. Alto impacto.
+
+**Corroboración:** Pendiente. No se cita fuente oficial. La afirmación del "secuestro de Maduro" es altamente controvertida y no verificada.
+
+---
+
+### 🟡 3.10. Operaciones cibernéticas ofensivas del Reino Unido
+
+**Fuente:** `@lineasrojas` — https://t.me/lineasrojas/15733 (2026-11-21 23:22)
+
+**Evidencia textual:**
+> "Londres ha reconocido la realización de operaciones cibernéticas ofensivas contra Rusia, China, Irán y Corea del Norte, según el general Robert Magowan en una entrevista a Sky News."
+
+**Hecho reportado:** El general Robert Magowan (Reino Unido) reconoce operaciones cibernéticas ofensivas contra Rusia, China, Irán y Corea del Norte en entrevista con Sky News.
+
+**Relevancia:** Confirmación de postura ofensiva en ciberespacio por parte del Reino Unido. Relevante para CTI.
+
+**Corroboración:** Pendiente. Se cita Sky News, pero no hay enlace a la entrevista.
+
+---
+
+## 4. CORRELACIONES ENTRE EVENTOS
+
+### Esquema 2: Correlación temática y temporal
+
+```
+                    ┌─────────────────────────────────────────────┐
+                    │         NARRATIVA CENTRAL: ASEDIO           │
+                    │   "Rusia y aliados responden a agresiones"  │
+                    └─────────────────────────────────────────────┘
+                                          │
+          ┌───────────────────────────────┼───────────────────────────────┐
+          │                               │                               │
+          ▼                               ▼                               ▼
+┌───────────────────┐         ┌───────────────────┐         ┌───────────────────┐
+│  FLANCO BÁLTICO   │         │  FLANCO GOLFO     │         │  FLANCO OCCIDENTAL│
+│  (OTAN)           │         │  (Irán-EE.UU.)    │         │  (Opinión pública)│
+├───────────────────┤         ├───────────────────┤         ├───────────────────┤
+│ • Sparta II       │         │ • Bahréin (Patriot│         │ • Musk / Maidán   │
+│ • Kaliningrado    │◄────────┤   Rifaa/Awali)    │         │ • Príncipe Harry  │
+│ • Sebastopol      │         │ • Quinta Flota    │         │ • Le Pen / Francia│
+│ • Odesa           │         │ • Ormuz / Sirik   │         │ • Lufthansa       │
+│ • MQ-9 / MQ-1     │         │ • Bab el-Mandeb   │         │ • FBI NCIC        │
+└───────────────────┘         └───────────────────┘         └───────────────────┘
+          │                               │                               │
+          └───────────────────────────────┼───────────────────────────────┘
+                                          │
+                                          ▼
+                    ┌─────────────────────────────────────────────┐
+                    │   CORRELACIÓN TEMPORAL: 21 NOV, 18:00-23:30 │
+                    │   Pico de actividad coordinada en 3 frentes │
+                    └─────────────────────────────────────────────┘
+```
+
+**Correlaciones identificadas:**
+
+1. **Correlación temporal:** El 21 de noviembre, entre las 18:00 y las 23:30 UTC, los tres canales publicaron simultáneamente eventos de los tres frentes (Báltico, Golfo, Occidental). Esto sugiere una **coordinación editorial** o una **explotación oportunista de un pico noticioso**.
+
+2. **Correlación temática:** Todos los eventos se enmarcan en la narrativa de "Rusia y aliados responden a agresiones". No hay eventos que muestren debilidad rusa o éxitos ucranianos/occidentales.
+
+3. **Correlación de fuentes:** Los canales se citan entre sí. `@lineasrojas` y `@RVvoenkor` comparten narrativas; `@guerrasygeo` aporta "OSINT" militar; `@atodapotencia` amplifica en español.
+
+4. **Correlación con eventos reales:** La brecha del FBI NCIC y la retirada en Bab el-Mandeb son eventos potencialmente reales (citados de CNN y AFP), pero se insertan en la narrativa prorrusa sin contexto.
+
+5. **Correlación de actores:** Irán aparece como aliado en el Golfo; Corea del Norte y Hezbollah como asesores de los hutíes; Venezuela como nuevo socio de EE.UU. (narrativa de "EE.UU. secuestra y luego negocia").
+
+---
+
+## 5. MATRIZ DE CORROBORACIÓN
+
+| Evento | Fuente en volcado | Fuente citada | ¿Verificado independientemente? | Nivel de confianza |
+|---|---|---|---|---|
+| Sparta II atacado | RVvoenkor, guerrasygeo | Fuerzas de Defensa finlandesas | No | Medio (fuente oficial citada) |
+| Violación espacio aéreo finlandés | guerrasygeo | Guardia fronteriza finlandesa | No | Medio |
+| Bahréin atacado por Irán | guerrasygeo, RVvoenkor | CGRI, Min. Interior Bahréin | No | Bajo (partes interesadas) |
+| Apagón Odesa | RVvoenkor | Ukrenergo | No | Medio |
+| Alarma Kaliningrado | RVvoenkor | Gobernador regional | No | Medio |
+| Musk / Maidán | lineasrojas | Ninguna | No | Bajo |
+| Príncipe Harry | lineasrojas | The Telegraph | No | Bajo (fuente citada, no enlazada) |
+| FBI NCIC | lineasrojas | CNN, exempleado FBI | No | Bajo |
+| Bab el-Mandeb | lineasrojas | AFP | No | Medio (fuente citada) |
+| Acuerdo EE.UU.-Venezuela | atodapotencia | Ninguna | No | Muy bajo |
+| Ciberoperaciones UK | lineasrojas | Sky News, Gral. Magowan | No | Medio |
+| MQ-9 derribado (58) | lineasrojas | Press TV, CGRI | No | Bajo |
+| Lufthansa inactividad | lineasrojas | Ninguna | No | Bajo |
+| Elecciones Francia / Le Pen | lineasrojas | Medios franceses | No | Bajo |
+
+**Conclusión de corroboración:** Ningún evento del volcado está verificado de forma independiente. La mayoría se apoya en fuentes citadas pero no enlazadas, o en partes interesadas (CGRI, gobernador ruso). El nivel de confianza es **bajo a medio** en el mejor de los casos.
+
+---
+
+## 6. TEMAS NARRATIVOS IDENTIFICADOS (TTPs de DESINFORMACIÓN)
+
+### Esquema 3: Flujo de la narrativa prorrusa
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         FLUJO DE LA NARRATIVA                                │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+  [Evento real o reportado]
+            │
+            ▼
+  ┌─────────────────────┐
+  │  SELECCIÓN          │  Se eligen eventos que encajan en la narrativa.
+  │  (¿Qué se publica?) │  Se omiten éxitos ucranianos/occidentales.
+  └─────────────────────┘
+            │
+            ▼
+  ┌─────────────────────┐
+  │  ENCUADRE           │  "Rusia responde", "OTAN agrede",
+  │  (¿Cómo se cuenta?) │  "Occidente decae", "Ucrania colapsa".
+  └─────────────────────┘
+            │
+            ▼
+  ┌─────────────────────┐
+  │  AMPLIFICACIÓN      │  Multiplicación en canales aliados
+  │  (¿Quién lo difunde?)│  (@RVvoenkor, @lineasrojas, @guerrasygeo,
+  └─────────────────────┘  @atodapotencia, listas de canales).
+            │
+            ▼
+  ┌─────────────────────┐
+  │  LEGITIMACIÓN       │  Cita de fuentes oficiales (CGRI, gobernadores,
+  │  (¿Quién lo avala?) │  guardias fronterizas) para dar apariencia de verdad.
+  └─────────────────────┘
+            │
+            ▼
+  ┌─────────────────────┐
+  │  ACCIÓN             │  Influir en opinión pública, justificar escalada,
+  │  (¿Para qué?)       │  erosionar confianza institucional.
+  └─────────────────────┘
+```
+
+| Tema | Canales | Técnica narrativa | Objetivo percibido | Evidencia |
+|---|---|---|---|---|
+| Ucrania ataca infraestructura rusa con drones | RVvoenkor, guerrasygeo | Victimización + escalada | Justificar represalias y deslegitimar a Ucrania | Sparta II, Sebastopol, Odesa |
+| Violación de espacio aéreo OTAN por Rusia | RVvoenkor, guerrasygeo | Normalización de acción ofensiva | Probar la respuesta de la OTAN | Kaliningrado, helicóptero en Finlandia |
+| Irán ataca bases de EE.UU. | guerrasygeo, lineasrojas | Legitimación de represalia | Fortalecer eje Rusia-Irán | Bahréin, Ormuz, MQ-9 |
+| Decadencia europea (Lufthansa) | lineasrojas | Schadenfreude económico | Desmoralizar apoyo a Ucrania | Lufthansa, crisis alemana |
+| Deslegitimación de Musk, Harry, Le Pen | lineasrojas | Ataque ad hominem | Polarizar opinión occidental | Musk/Maidán, Harry/Telegraph, Le Pen/registro |
+| FBI comprometido (NCIC) | lineasrojas | Amplificación de brecha | Erosionar confianza en instituciones de EE.UU. | NCIC, ShinyHunters |
+| Colapso demográfico ucraniano | RVvoenkor | Proyección catastrófista | Desmoralizar a Ucrania y sus aliados | Instituto de Demografía |
+| EE.UU. como actor desestabilizador | atodapotencia, lineasrojas | Inversión de roles | Presentar a EE.UU. como agresor | Venezuela, Maidán |
+
+---
+
+## 7. INDICADORES DE COMPROMISO (IOCs) — NIVEL NARRATIVO
+
+> **Nota crítica:** Estos IOCs son **indicadores de actividad narrativa**, no artefactos técnicos maliciosos (hashes, IPs, dominios). Su valor es **contextual y de baja fidelidad**. Se incluyen para permitir la monitorización de la propagación de estas narrativas, no para bloqueo automatizado.
+
+### 7.1. Canales de Telegram (Fuentes primarias)
+
+| Valor | Tipo | Contexto | Primera obs. | Última obs. | Confianza | Acción |
+|---|---|---|---|---|---|---|
+| `@RVvoenkor` | Canal Telegram | Propaganda rusa, alertas de ataque | 2026-11-19 | 2026-11-21 | Alta | Monitorizar |
+| `@lineasrojas` | Canal Telegram | Propaganda rusa en español | 2026-11-19 | 2026-11-21 | Alta | Monitorizar |
+| `@guerrasygeo` | Canal Telegram | OSINT militar prorruso | 2026-11-21 | 2026-11-21 | Media | Monitorizar |
+| `@atodapotencia` | Canal Telegram | Propaganda rusa en español | 2026-11-19 | 2026-11-21 | Media | Monitorizar |
+
+### 7.2. Enlaces de Telegram (Mensajes específicos)
+
+| Valor | Tipo | Contexto | Fecha | Confianza | Acción |
+|---|---|---|---|---|---|
+| `https://t.me/RVvoenkor/127686` | URL Telegram | Apagón Odesa | 2026-11-21 | Alta | Referencia |
+| `https://t.me/RVvoenkor/127691` | URL Telegram | Alarma Kaliningrado | 2026-11-21 | Alta | Referencia |
+| `https://t.me/RVvoenkor/127694` | URL Telegram | Alarma Kaliningrado (2) | 2026-11-21 | Alta | Referencia |
+| `https://t.me/RVvoenkor/127696` | URL Telegram | Carguero Sparta II | 2026-11-21 | Alta | Referencia |
+| `https://t.me/RVvoenkor/127697` | URL Telegram | Imágenes Sparta II | 2026-11-21 | Alta | Referencia |
+| `https://t.me/RVvoenkor/127700` | URL Telegram | Ucrania no derriba misiles | 2026-11-21 | Alta | Referencia |
+| `https://t.me/RVvoenkor/127701` | URL Telegram | Sebastopol atacado | 2026-11-21 | Alta | Referencia |
+| `https://t.me/RVvoenkor/127702` | URL Telegram | Irán ataca Bahréin | 2026-11-21 | Alta | Referencia |
+| `https://t.me/RVvoenkor/127705` | URL Telegram | Letonia y Rusia | 2026-11-21 | Alta | Referencia |
+| `https://t.me/RVvoenkor/127706` | URL Telegram | Trump y Putin | 2026-11-21 | Alta | Referencia |
+| `https://t.me/RVvoenkor/127707` | URL Telegram | Tsarev / Maidán | 2026-11-21 | Alta | Referencia |
+| `https://t.me/lineasrojas/15722` | URL Telegram | Mi-28NM / Dan-T | 2026-11-19 | Alta | Referencia |
+| `https://t.me/lineasrojas/15723` | URL Telegram | Musk / Maidán | 2026-11-21 | Alta | Referencia |
+| `https://t.me/lineasrojas/15724` | URL Telegram | Príncipe Harry | 2026-11-21 | Alta | Referencia |
+| `https://t.me/lineasrojas/15727` | URL Telegram | Zelenski / Crimea | 2026-11-21 | Alta | Referencia |
+| `https://t.me/lineasrojas/15728` | URL Telegram | Túnel Beskid | 2026-11-20 | Alta | Referencia |
+| `https://t.me/lineasrojas/15731` | URL Telegram | Bab el-Mandeb | 2026-11-20 | Alta | Referencia |
+| `https://t.me/lineasrojas/15732` | URL Telegram | Catálogo canales | 2026-11-20 | Alta | Referencia |
+| `https://t.me/lineasrojas/15733` | URL Telegram | Ciberoperaciones UK | 2026-11-21 | Alta | Referencia |
+| `https://t.me/lineasrojas/15734` | URL Telegram | MQ-9 derribado | 2026-11-21 | Alta | Referencia |
+| `https://t.me/lineasrojas/15735` | URL Telegram | MQ-9 (duplicado) | 2026-11-21 | Alta | Referencia |
+| `https://t.me/lineasrojas/15737` | URL Telegram | FBI NCIC | 2026-11-21 | Alta | Referencia |
+| `https://t.me/lineasrojas/15738` | URL Telegram | UKRAINE WATCH | 2026-11-21 | Alta | Referencia |
+| `https://t.me/lineasrojas/15739` | URL Telegram | Príncipe Harry (dup) | 2026-11-21 | Alta | Referencia |
+| `https://t.me/lineasrojas/15740` | URL Telegram | Lufthansa | 2026-11-21 | Alta | Referencia |
+| `https://t.me/lineasrojas/15741` | URL Telegram | Elecciones Francia | 2026-11-21 | Alta | Referencia |
+| `https://t.me/guerrasygeo/131775` | URL Telegram | Foto pinned | 2026-11-21 | Alta | Referencia |
+| `https://t.me/guerrasygeo/131776` | URL Telegram | Explosiones Bahréin | 2026-11-21 | Alta | Referencia |
+| `https://t.me/guerrasygeo/131777` | URL Telegram | Quinta Flota atacada | 2026-11-21 | Alta | Referencia |
+| `https://t.me/guerrasygeo/131778` | URL Telegram | Misil interceptor | 2026-11-21 | Alta | Referencia |
+| `https://t.me/guerrasygeo/131779` | URL Telegram | Defensa aérea Bahréin | 2026-11-21 | Alta | Referencia |
+| `https://t.me/guerrasygeo/131780` | URL Telegram | Al-Rifa'a atacada | 2026-11-21 | Alta | Referencia |
+| `https://t.me/guerrasygeo/131781` | URL Telegram | Ormuz / Sirik | 2026-11-21 | Alta | Referencia |
+| `https://t.me/guerrasygeo/131782` | URL Telegram | Dron impacta industria | 2026-11-21 | Alta | Referencia |
+| `https://t.me/guerrasygeo/131783` | URL Telegram | CGRI / Patriot | 2026-11-21 | Alta | Referencia |
+| `https://t.me/guerrasygeo/131784` | URL Telegram | Norcoreanos/IRGC/hutíes | 2026-11-21 | Alta | Referencia |
+| `https://t.me/guerrasygeo/131785` | URL Telegram | Sirena Bahréin | 2026-11-21 | Alta | Referencia |
+| `https://t.me/guerrasygeo/131786` | URL Telegram | Dron industria (dup) | 2026-11-21 | Alta | Referencia |
+| `https://t.me/guerrasygeo/131787` | URL Telegram | Trump Truth Social | 2026-11-21 | Alta | Referencia |
+| `https://t.me/guerrasygeo/131788` | URL Telegram | MQ9/MQ1 destruidos | 2026-11-21 | Alta | Referencia |
+| `https://t.me/guerrasygeo/131789` | URL Telegram | Sparta II incendio | 2026-11-21 | Alta | Referencia |
+| `https://t.me/guerrasygeo/131790` | URL Telegram | Ansar Allah / Riad | 2026-11-21 | Alta | Referencia |
+| `https://t.me/guerrasygeo/131791` | URL Telegram | YouTube live | 2026-11-21 | Alta | Referencia |
+| `https://t.me/guerrasygeo/131792` | URL Telegram | F-35 emergencia EAU | 2026-11-21 | Alta | Referencia |
+| `https://t.me/guerrasygeo/131793` | URL Telegram | Kuwait atacado | 2026-11-21 | Alta | Referencia |
+| `https://t.me/guerrasygeo/131794` | URL Telegram | F-35 (dup) | 2026-11-21 | Alta | Referencia |
+| `https://t.me/atodapotencia/17806` | URL Telegram | EE.UU.-Venezuela | 2026-11-21 | Alta | Referencia |
+| `https://t.me/atodapotencia/17807` | URL Telegram | ROKOT/TORMENTA | 2026-11-19 | Alta | Referencia |
+| `https://t.me/addlist/UMIbUTcJoY9mMWNk` | URL Telegram | Lista de canales | 2026-11-20 | Alta | Referencia |
+
+### 7.3. Canales referenciados (no monitorizados directamente)
+
+| Valor | Tipo | Contexto | Confianza | Acción |
+|---|---|---|---|---|
+| `@nnm05716fra` | Canal Telegram | No se pudo obtener (fallback) | Baja | Investigar |
+| `@+yM1NGYGCKQk3MGIx` | Canal Telegram | No se pudo obtener (privado) | Baja | Investigar |
+| `@+qnvbmn_zhW1lZDQy` | Canal Telegram | No se pudo obtener (privado) | Baja | Investigar |
+| `@+pCJr5PFN5Nc5NDNh` | Canal Telegram | No se pudo obtener (privado) | Baja | Investigar |
+| `@+XHZdK3uFVARlYzZh` | Canal Telegram | No se pudo obtener (privado) | Baja | Investigar |
+| `@vamosarusia3264` | Canal Telegram | No se pudo obtener (fallback) | Baja | Investigar |
+| `@geopolitics_prime` | Canal Telegram | Contacto para catálogo | Baja | Monitorizar |
+
+### 7.4. Hashtags y marcadores narrativos
+
+| Valor | Tipo | Contexto | Confianza | Acción |
+|---|---|---|---|---|
+| `#ucrania` | Hashtag | Narrativa sobre Ucrania | Baja | Monitorizar volumen |
+| `#irán` / `#iran` | Hashtag | Narrativa Irán | Baja | Monitorizar volumen |
+| `#eeuu` | Hashtag | Narrativa anti-EE.UU. | Baja | Monitorizar volumen |
+| `#yemen` | Hashtag | Narrativa hutí | Baja | Monitorizar volumen |
+| `#reino_unido` | Hashtag | Narrativa anti-UK | Baja | Monitorizar volumen |
+| `#alemania` | Hashtag | Narrativa decadencia | Baja | Monitorizar volumen |
+| `#francia` | Hashtag | Narrativa Le Pen | Baja | Monitorizar volumen |
+| `#américa` | Hashtag | Narrativa Venezuela | Baja | Monitorizar volumen |
+| `#venezuela` | Hashtag | Narrativa Venezuela | Baja | Monitorizar volumen |
+
+### 7.5. Términos de búsqueda para monitorización
+
+| Término | Contexto | Acción |
+|---|---|---|
+| `Sparta II` + `Golfo de Finlandia` | Evento Báltico | Búsqueda OSINT |
+| `Ya Umm Al-Baneen` | Operación iraní | Búsqueda OSINT |
+| `NCIC` + `FBI` + `hackers` | Narrativa brecha | Búsqueda OSINT |
+| `Lufthansa` + `inactividad` | Narrativa económica | Búsqueda OSINT |
+| `Dan-T` + `Mi-28NM` | Narrativa militar | Búsqueda OSINT |
+| `túnel Beskid` + `armas` | Narrativa logística | Búsqueda OSINT |
+| `Bab el-Mandeb` + `hutíes` | Narrativa Yemen | Búsqueda OSINT |
+| `Musk` + `Maidán` | Narrativa deslegitimación | Búsqueda OSINT |
+| `príncipe Harry` + `Rusia` | Narrativa deslegitimación | Búsqueda OSINT |
+| `Le Pen` + `registro` | Narrativa Francia | Búsqueda OSINT |
+
+---
+
+## 8. MAPEO MITRE ATT&CK (TÁCTICAS DE INFLUENCIA)
+
+> **Nota:** MITRE ATT&CK está diseñado para comportamiento de adversarios cibernéticos. El mapeo siguiente adapta sus tácticas al **comportamiento de actores de influencia** en el espacio informativo. Se indica la limitación en cada caso.
+
+| Táctica ATT&CK | Técnica / Sub-técnica | Comportamiento observado en el volcado | Evidencia (enlace) | Limitación del mapeo |
+|---|---|---|---|---|
+| **Reconocimiento (TA0043)** | T1592 — Gather Victim Host Information | Monitorización de reacciones occidentales a ataques (OTAN, Finlandia) | `guerrasygeo/131789` | No es reconocimiento técnico; es reconocimiento narrativo |
+| **Desarrollo de Recursos (TA0042)** | T1585 — Establish Accounts | Canales de Telegram consolidados (`@RVvoenkor`, `@lineasrojas`) | `lineasrojas/15732` | Los canales ya existen; el volcado no muestra creación |
+| **Acceso Inicial (TA0001)** | T1566 — Phishing | Difusión de enlaces a artículos, vídeos y listas de canales | `lineasrojas/15732`, `lineasrojas/15738` | No hay phishing técnico; es captación de audiencia |
+| **Ejecución (TA0002)** | T1204 — User Execution | El usuario debe hacer clic en enlaces de Telegram o vídeos | `guerrasygeo/131791` | Ejecución narrativa, no de código |
+| **Persistencia (TA0003)** | T1136 — Create Account | Suscripción a canales; adición a listas (`addlist`) | `lineasrojas/15732` | Persistencia de audiencia, no de acceso técnico |
+| **Evasión de Defensa (TA0005)** | T1027 — Obfuscated Files or Information | Uso de encuadres selectivos, omisión de contexto, traducción editorializada | `lineasrojas/15723`, `lineasrojas/15724` | Ofuscación narrativa, no técnica |
+| **Colección (TA0009)** | T1598 — Phishing for Information | Solicitud de suscripciones, interacción con canales | `lineasrojas/15732` | Recolección de audiencia, no de datos técnicos |
+| **Comando y Control (TA0011)** | T1105 — Ingress Tool Transfer | Distribución de enlaces a Odysee, X, Facebook | `lineasrojas/15722`, `guerrasygeo/131791` | C2 narrativo (redirección de audiencia) |
+| **Impacto (TA0040)** | T1565 — Data Manipulation | Edición de declaraciones (Musk, Harry) para alterar percepción | `lineasrojas/15723`, `lineasrojas/15724` | Manipulación informativa, no de datos técnicos |
+
+**Técnicas de influencia adicionales (no mapeadas a ATT&CK pero relevantes):**
+- **Amplificación de brechas reales** (FBI NCIC, `lineasrojas/15737`) para erosionar confianza.
+- **Legitimación de actores hostiles** (Irán, `guerrasygeo/131783`) mediante encuadre de represalia.
+- **Deshumanización del adversario** (Ucrania, OTAN) mediante lenguaje emotivo (`lineasrojas/15727`).
+- **Inversión de roles** (EE.UU. como agresor en Venezuela, `atodapotencia/17806`).
+- **Catastrofismo demográfico** (Ucrania 26,2M en 2030, `RVvoenkor/127693`).
+
+---
+
+## 9. EVALUACIÓN DE RIESGO (PERSPECTIVA DEFENSIVA)
+
+| Riesgo | Probabilidad | Impacto | Nivel | Evidencia | Recomendación |
+|---|---|---|---|---|---|
+| Propagación de narrativa de escalada en el Báltico | Alta | Medio | **Alto** | `RVvoenkor/127696`, `guerrasygeo/131789` | Monitorizar medios finlandeses y OTAN |
+| Amplificación de brecha FBI NCIC | Media | Medio | **Medio** | `lineasrojas/15737` | Verificar con fuentes primarias de EE.UU. |
+| Uso de narrativa Irán-Bahréin para justificar ataques | Media | Alto | **Alto** | `guerrasygeo/131783`, `RVvoenkor/127702` | Monitorizar tráfico marítimo en Ormuz |
+| Deslegitimación de figuras occidentales | Alta | Bajo | **Medio** | `lineasrojas/15723`, `lineasrojas/15724` | Concienciación en equipos de comunicación |
+| Explotación de crisis económica europea | Media | Bajo | **Bajo** | `lineasrojas/15740` | Monitorizar medios alemanes |
+| Catastrofismo demográfico ucraniano | Media | Medio | **Medio** | `RVvoenkor/127693` | Monitorizar medios ucranianos |
+| Inversión de roles EE.UU.-Venezuela | Baja | Alto | **Medio** | `atodapotencia/17806` | Verificar con fuentes oficiales |
+
+---
+
+## 10. LAGUNAS DE INFORMACIÓN (GAPS)
+
+1. **No hay verificación independiente** de los hechos reportados por los canales. La mayoría son declaraciones de partes interesadas (Rusia, Irán).
+2. **El volcado tiene codificación corrupta** (mojibake) en caracteres cirílicos y emojis, lo que puede introducir errores de interpretación.
+3. **No se incluyen fechas exactas** para algunos eventos (ej. ataque a Odesa, alarma Kaliningrado).
+4. **No hay evidencia técnica** (hashes, IPs, dominios maliciosos) en el volcado. Los IOCs son exclusivamente narrativos.
+5. **La atribución de los ataques** (Ucrania al *Sparta II*, Irán a Bahréin) proviene de las mismas fuentes que los reportan, sin corroboración.
+6. **No se enlazan las fuentes citadas** (The Telegraph, CNN, AFP, Sky News, Ukrenergo). Esto impide la verificación directa.
+7. **Faltan los mensajes completos** de algunos canales (fallback fallido: `@nnm05716fra`, `@+yM1NGYGCKQk3MGIx`, etc.).
+8. **No hay contexto sobre la autoría** de los canales ni su vinculación con actores estatales.
+9. **No se analiza la audiencia** ni el alcance de los canales.
+10. **No se comparan las narrativas** con medios occidentales para identificar divergencias.
+
+---
+
+## 11. RECOMENDACIONES
+
+### Para SOC / Threat Intelligence
+- **No bloquear** los canales de Telegram listados a nivel de red; son fuentes de monitorización, no malware.
+- **Monitorizar** la propagación de los términos de búsqueda de la sección 7.5 en redes sociales y foros.
+- **Cruzar** los eventos subrayados (sección 3) con fuentes primarias (medios finlandeses, CENTCOM, Ukrenergo) antes de cualquier acción.
+- **Enriquecer** los IOCs narrativos con datos de alcance (número de suscriptores, engagement) si se dispone de acceso.
+- **Automatizar** la monitorización de los canales listados mediante herramientas OSINT (Telegram API, scrapers éticos).
+
+### Para equipos de concienciación
+- Utilizar los temas narrativos de la sección 6 como ejemplos de **manipulación informativa** en formación.
+- Enfatizar la **falta de verificación** y el uso de **encuadres selectivos**.
+- Explicar el **flujo de la narrativa** (esquema 3) como modelo de desinformación.
+
+### Para liderazgo
+- El riesgo principal no es técnico, sino **reputacional y de escalada**. La narrativa del Báltico y Ormuz puede influir en la percepción pública y en decisiones políticas.
+- **No amplificar** el contenido. La monitorización debe ser silenciosa y con fines defensivos.
+- **Documentar** la evolución de la narrativa para análisis posteriores.
+
+---
+
+## 12. FUENTES Y TRAZABILIDAD
+
+| Fuente | Tipo | URL / Identificador | Fecha de acceso |
+|---|---|---|---|
+| `@RVvoenkor` | Canal Telegram | https://t.me/RVvoenkor | 2026-11-21 |
+| `@lineasrojas` | Canal Telegram | https://t.me/lineasrojas | 2026-11-21 |
+| `@guerrasygeo` | Canal Telegram | https://t.me/guerrasygeo | 2026-11-21 |
+| `@atodapotencia` | Canal Telegram | https://t.me/atodapotencia | 2026-11-21 |
+| Volcado original | Archivo de texto | `🔍 Canal @RVvoenkor.txt` | 2026-11-22 |
+
+**Metodología de extracción:** Lectura manual del volcado, identificación de eventos y temas, estructuración en secciones CTI, mapeo ATT&CK adaptado a influencia, generación de IOCs narrativos, correlación temporal y temática, matriz de corroboración.
+
+**Limitación metodológica:** El volcado presenta corrupción de codificación (mojibake) que afecta a caracteres cirílicos y emojis. Se ha interpretado el contenido por contexto. No se ha realizado traducción automática ni verificación externa.
+
+---
+
+## 13. DECLARACIÓN DE INTEGRIDAD
+
+Este informe se ha elaborado siguiendo los principios de **inteligencia ética**:
+- **Atribución clara** de todas las afirmaciones a sus fuentes originales.
+- **No amplificación** de propaganda: el contenido se cita para análisis, no para difusión.
+- **Transparencia sobre limitaciones** y falta de verificación.
+- **Uso exclusivamente defensivo** del material.
+
+**El repositorio no se hace responsable del uso indebido de este informe.**
+
+---
+
+*Fin del Informe Resumen Andromeda — 2026-11-22*
+```
+
+---
+
+Ahora sí incluye: los ~30 eventos del volcado, línea temporal completa, 3 esquemas (cronología, correlación temática, flujo narrativo), evidencias textuales con enlaces, matriz de corroboración, IOCs con contexto, mapeo ATT&CK con evidencia, evaluación de riesgo y 10 gaps. Si quieres, te preparo también el `README.md` actualizado con el índice y la política de uso ético para este tipo de material.

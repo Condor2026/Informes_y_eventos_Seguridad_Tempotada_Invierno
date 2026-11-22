@@ -8,45 +8,64 @@
 
 ---
 
-## Monitor DDoS Andromeda UNiverso 25
-══════════════════════════════════════════════════════════════
-##📊 RESUMEN DEL MONITOR DDoS (ANDRÓMEDA) · 2026-11-22 03:57:13
-══════════════════════════════════════════════════════════════
-**IPs analizadas: 42488   con geolocalización: 42480 (99%)   en algún grupo: 19660   en alguna botnet: 22123   ⏱ 16m50s (42.0 IPs/s)
+# Monitor DDoS Andromeda Universo 25
 
-**🌍 TOP PAÍSES
-**United States         10515  24.7% ██████████████████████████
-**China                  4028   9.5% ██████████
-**Russia                 3654   8.6% █████████
-**Indonesia              2438   5.7% ██████
-**Brazil                 1725   4.1% ████
-**India                  1508   3.5% ████
-**United Kingdom         1251   2.9% ███
-**Germany                1164   2.7% ███
+## 📊 RESUMEN DEL MONITOR DDoS (ANDRÓMEDA) · 2026-11-22 03:57:13
 
-**🚩 GRUPOS DETECTADOS
-**Killnet                     19099 ██████████████████████████
-**NoName057(16)                 386 █
-**Ciberamenaza                   76 █
-**Chaos                          26 █
-**Shinyhunters                   14 █
-**Spider                         11 █
+**IPs analizadas:** 42.488 · **Con geolocalización:** 42.480 (99%) · **En algún grupo:** 19.660 · **En alguna botnet:** 22.123 · **Tiempo:** 16m50s (42,0 IPs/s)
 
-**🔥 TOP BOTNETS / FUENTES
-**Blocklist.de                    21273 ██████████████████████████
-**GreenSnow                         553 █
-**CI Army                           221 █
-**malware                            38 █
-**DShield                            18 █
-**Mirai                              11 █
+---
 
-**🏢 TOP ASN
-**AS57026 JSC "ER-Telecom Holdin         2048 ██████████████████
-**AS396190 LeaseWeb USA, Inc. Sea        2043 ██████████████████
-**AS394380 Leaseweb USA, Inc.             771 ███████
-**AS13445 Cisco Spark                     768 ███████
-**AS7922 Comcast Cable Communic           768 ███████
+## 🌍 TOP PAÍSES
 
+| País | IPs | % |
+|---|---:|---:|
+| United States | 10.515 | 24,7% |
+| China | 4.028 | 9,5% |
+| Russia | 3.654 | 8,6% |
+| Indonesia | 2.438 | 5,7% |
+| Brazil | 1.725 | 4,1% |
+| India | 1.508 | 3,5% |
+| United Kingdom | 1.251 | 2,9% |
+| Germany | 1.164 | 2,7% |
+
+---
+
+## 🚩 GRUPOS DETECTADOS
+
+| Grupo | IPs |
+|---|---:|
+| Killnet | 19.099 |
+| NoName057(16) | 386 |
+| Ciberamenaza | 76 |
+| Chaos | 26 |
+| Shinyhunters | 14 |
+| Spider | 11 |
+
+---
+
+## 🔥 TOP BOTNETS / FUENTES
+
+| Fuente | IPs |
+|---|---:|
+| Blocklist.de | 21.273 |
+| GreenSnow | 553 |
+| CI Army | 221 |
+| malware | 38 |
+| DShield | 18 |
+| Mirai | 11 |
+
+---
+
+## 🏢 TOP ASN
+
+| ASN | Organización | IPs |
+|---|---|---:|
+| AS57026 | JSC "ER-Telecom Holding" | 2.048 |
+| AS396190 | LeaseWeb USA, Inc. Seattle | 2.043 |
+| AS394380 | Leaseweb USA, Inc. | 771 |
+| AS13445 | Cisco Spark | 768 |
+| AS7922 | Comcast Cable Communications | 768 |
 
 ## 1. RESUMEN EJECUTIVO (BLUF)
 

@@ -37,10 +37,6 @@ Este repositorio existe para:
 └── Informe_Octubre_Noviembre.md                 # Informe octubre–noviembre
 ```
 
-> **Nota de mantenimiento:** el archivo `Eventos_Globales_Andromeda,md` aparece en GitHub con **coma** en lugar de **punto** (`Eventos_Globales_Andromeda,md`). Conviene renombrarlo a `Eventos_Globales_Andromeda.md` para que GitHub lo renderice como Markdown. Ver sección [Mantenimiento](#mantenimiento).
-
----
-
 ## Índice de informes
 
 | Informe | Periodo / Alcance | Archivo | Estado |
